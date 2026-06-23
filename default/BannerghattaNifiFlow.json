@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1782197568789,
+    "description" : "",
+    "identifier" : "BannerghattaNifiFlow",
+    "lastModifiedTimestamp" : 1782197568789,
+    "name" : "Bannerghatta_Nifi_Flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
