@@ -5387,7 +5387,7 @@
               "Database Driver Class Name" : "org.postgresql.Driver",
               "Minimum Idle Connections" : "0",
               "Max Total Connections" : "8",
-              "Database Connection URL" : "jdbc:postgresql://27.34.240.58:5433/bbbp_live",
+              "Database Connection URL" : "jdbc:postgresql://59.93.107.242:5433,27.34.240.58:5433/bbbp_live",
               "Password Source" : "PASSWORD",
               "Time Between Eviction Runs" : "-1",
               "Database User" : "postgres",
@@ -68686,7 +68686,7 @@
             "Database Driver Class Name" : "org.postgresql.Driver",
             "Minimum Idle Connections" : "0",
             "Max Total Connections" : "8",
-            "Database Connection URL" : "jdbc:postgresql://27.34.240.58:5433/bbbp_live",
+            "Database Connection URL" : "jdbc:postgresql://59.93.107.242:5433,27.34.240.58:5433/bbbp_live",
             "Password Source" : "PASSWORD",
             "Time Between Eviction Runs" : "-1",
             "Database User" : "postgres",
@@ -147273,6 +147273,6 @@
   "snapshotMetadata" : {
     "author" : "31cea640-9d51-4c98-874f-1f3d7309c44e",
     "flowIdentifier" : "Bannerghattaflow",
-    "timestamp" : 1783245822874
+    "timestamp" : 1783317012038
   }
 }
