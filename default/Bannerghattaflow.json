@@ -5641,39 +5641,6 @@
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
-              "bends" : [ {
-                "x" : 1552.0,
-                "y" : -416.0
-              } ],
-              "componentType" : "CONNECTION",
-              "destination" : {
-                "comments" : "",
-                "groupId" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
-                "id" : "c2f0ed38-6ac4-39e1-bf5e-60537bfac299",
-                "name" : "UpdateAttribute",
-                "type" : "PROCESSOR"
-              },
-              "flowFileExpiration" : "1 min",
-              "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
-              "identifier" : "4cb07096-ff8e-39f4-9b7c-df2bfcb20db1",
-              "labelIndex" : 0,
-              "loadBalanceCompression" : "DO_NOT_COMPRESS",
-              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-              "name" : "",
-              "partitioningAttribute" : "",
-              "prioritizers" : [ ],
-              "selectedRelationships" : [ "success" ],
-              "source" : {
-                "comments" : "",
-                "groupId" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
-                "id" : "c6e97c44-1128-3103-85d1-d6d467f5420a",
-                "name" : "ExecuteSQLRecord",
-                "type" : "PROCESSOR"
-              },
-              "zIndex" : 0
-            }, {
-              "backPressureDataSizeThreshold" : "1 GB",
-              "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
               "componentType" : "CONNECTION",
               "destination" : {
@@ -5683,7 +5650,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "544cd3a0-2203-36b0-acf4-d94ce887cb43",
               "labelIndex" : 0,
@@ -5719,7 +5686,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "57711b7a-9015-38b0-bf91-98ee19f0a9fd",
               "labelIndex" : 0,
@@ -5839,7 +5806,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "ac485803-76b6-363f-ac2f-095ddc1d18b9",
               "labelIndex" : 0,
@@ -6631,7 +6598,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"FinancialYear\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "update \"FinancialYear\" set \"SyncStatusType\"=1  where \"Id\" in (\nSELECT \n  \"Id\" \nFROM \"FinancialYear\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}')\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n)); ",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -6920,7 +6887,7 @@
                 "Tar Modified Time" : "${file.lastModifiedTime}",
                 "Delimiter Strategy" : "Do Not Use Delimiters",
                 "Merge Format" : "Binary Concatenation",
-                "Minimum Number of Entries" : "3"
+                "Minimum Number of Entries" : "2"
               },
               "propertyDescriptors" : {
                 "Metadata Strategy" : {
@@ -7787,7 +7754,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "ad2d4a53-019c-1000-6608-49b38d59724a",
               "identifier" : "3584ddac-5d0d-335d-8008-e40fe27a4388",
               "labelIndex" : 0,
@@ -7983,6 +7950,35 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 41
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
+                "id" : "ad2d4a5e-019c-1000-860a-4d852407b828",
+                "name" : "outtb1",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ad2d4a53-019c-1000-6608-49b38d59724a",
+              "identifier" : "77cad258-ec18-392f-8b84-5ac1f99ed3cd",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
+                "id" : "ad2d4a57-019c-1000-406a-7a8525ecac68",
+                "name" : "PutSQL",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 43
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -8214,7 +8210,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "ad2d4a53-019c-1000-6608-49b38d59724a",
               "identifier" : "ad2d4a62-019c-1000-1b32-0230207aeeba",
               "labelIndex" : 0,
@@ -8295,72 +8291,6 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 11
-            }, {
-              "backPressureDataSizeThreshold" : "1 GB",
-              "backPressureObjectThreshold" : 10000,
-              "bends" : [ {
-                "x" : 512.0,
-                "y" : -464.0
-              } ],
-              "componentType" : "CONNECTION",
-              "destination" : {
-                "comments" : "",
-                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
-                "id" : "ad2d4a56-019c-1000-42d4-1842e550d803",
-                "name" : "UpdateAttribute",
-                "type" : "PROCESSOR"
-              },
-              "flowFileExpiration" : "0 sec",
-              "groupIdentifier" : "ad2d4a53-019c-1000-6608-49b38d59724a",
-              "identifier" : "ad2d4a67-019c-1000-1c48-c7c652162a2d",
-              "labelIndex" : 0,
-              "loadBalanceCompression" : "DO_NOT_COMPRESS",
-              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-              "name" : "",
-              "partitioningAttribute" : "",
-              "prioritizers" : [ ],
-              "selectedRelationships" : [ "success" ],
-              "source" : {
-                "comments" : "",
-                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
-                "id" : "ad2d4a58-019c-1000-d4e1-9648011bae9b",
-                "name" : "ExecuteSQLRecord",
-                "type" : "PROCESSOR"
-              },
-              "zIndex" : 0
-            }, {
-              "backPressureDataSizeThreshold" : "1 GB",
-              "backPressureObjectThreshold" : 10000,
-              "bends" : [ {
-                "x" : 2712.0,
-                "y" : -440.0
-              } ],
-              "componentType" : "CONNECTION",
-              "destination" : {
-                "comments" : "",
-                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
-                "id" : "a7ca0c08-474d-332c-9394-e5bdda818472",
-                "name" : "MergeContent",
-                "type" : "PROCESSOR"
-              },
-              "flowFileExpiration" : "1 min",
-              "groupIdentifier" : "ad2d4a53-019c-1000-6608-49b38d59724a",
-              "identifier" : "ad2d4a69-019c-1000-16ff-dfedf10c44ba",
-              "labelIndex" : 0,
-              "loadBalanceCompression" : "DO_NOT_COMPRESS",
-              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-              "name" : "",
-              "partitioningAttribute" : "",
-              "prioritizers" : [ ],
-              "selectedRelationships" : [ "success" ],
-              "source" : {
-                "comments" : "",
-                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
-                "id" : "ad2d4a57-019c-1000-406a-7a8525ecac68",
-                "name" : "PutSQL",
-                "type" : "PROCESSOR"
-              },
-              "zIndex" : 20
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -8944,7 +8874,7 @@
                 "Tar Modified Time" : "${file.lastModifiedTime}",
                 "Delimiter Strategy" : "Do Not Use Delimiters",
                 "Merge Format" : "Binary Concatenation",
-                "Minimum Number of Entries" : "1"
+                "Minimum Number of Entries" : "2"
               },
               "propertyDescriptors" : {
                 "Metadata Strategy" : {
@@ -10150,7 +10080,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"UserInfo\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -10872,6 +10802,35 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
+                "id" : "b7c3f02a-019f-1000-9adf-09731e9e3f78",
+                "name" : "MergeContent",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ad8ac211-019c-1000-0740-3692f420537f",
+              "identifier" : "0620f894-4738-318b-b857-8130a5b06e5f",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "" ],
+              "source" : {
+                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
+                "id" : "ad8ac21b-019c-1000-5ccd-5cca16f3fbd1",
+                "name" : "input_tb1",
+                "type" : "INPUT_PORT"
+              },
+              "zIndex" : 26
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
                 "id" : "1269a298-9c45-3adf-bc42-5b185bfb6b01",
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
@@ -10894,6 +10853,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 22
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
+                "id" : "ad8ac213-019c-1000-e563-2aca806594d2",
+                "name" : "UpdateAttribute",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ad8ac211-019c-1000-0740-3692f420537f",
+              "identifier" : "a03be644-8f87-3011-8177-0bba48a18c89",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "merged" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
+                "id" : "b7c3f02a-019f-1000-9adf-09731e9e3f78",
+                "name" : "MergeContent",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -11146,35 +11135,6 @@
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
-              "bends" : [ ],
-              "componentType" : "CONNECTION",
-              "destination" : {
-                "comments" : "",
-                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
-                "id" : "ad8ac213-019c-1000-e563-2aca806594d2",
-                "name" : "UpdateAttribute",
-                "type" : "PROCESSOR"
-              },
-              "flowFileExpiration" : "1 min",
-              "groupIdentifier" : "ad8ac211-019c-1000-0740-3692f420537f",
-              "identifier" : "ad8ac226-019c-1000-0bb5-e64ca3a33245",
-              "labelIndex" : 0,
-              "loadBalanceCompression" : "DO_NOT_COMPRESS",
-              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-              "name" : "",
-              "partitioningAttribute" : "",
-              "prioritizers" : [ ],
-              "selectedRelationships" : [ "" ],
-              "source" : {
-                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
-                "id" : "ad8ac21b-019c-1000-5ccd-5cca16f3fbd1",
-                "name" : "input_tb1",
-                "type" : "INPUT_PORT"
-              },
-              "zIndex" : 14
-            }, {
-              "backPressureDataSizeThreshold" : "1 GB",
-              "backPressureObjectThreshold" : 10000,
               "bends" : [ {
                 "x" : 2712.0,
                 "y" : -440.0
@@ -11344,8 +11304,8 @@
               "name" : "input_tb1",
               "portFunction" : "STANDARD",
               "position" : {
-                "x" : -1128.0,
-                "y" : -8.0
+                "x" : -1416.0,
+                "y" : -32.0
               },
               "scheduledState" : "ENABLED",
               "type" : "INPUT_PORT"
@@ -11362,8 +11322,8 @@
               "name" : "outtb1",
               "portFunction" : "STANDARD",
               "position" : {
-                "x" : 3784.0,
-                "y" : -112.0
+                "x" : 3960.0,
+                "y" : -128.0
               },
               "scheduledState" : "ENABLED",
               "type" : "OUTPUT_PORT"
@@ -12615,7 +12575,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"UserInfoCategoryMapping\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfoCategoryMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfoCategoryMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -12689,6 +12649,206 @@
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
               "type" : "org.apache.nifi.processors.standard.PutSQL",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "failure", "original" ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "2.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "ad8ac211-019c-1000-0740-3692f420537f",
+              "identifier" : "b7c3f02a-019f-1000-9adf-09731e9e3f78",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "MergeContent",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : -1120.0,
+                "y" : -72.0
+              },
+              "properties" : {
+                "Metadata Strategy" : "Do Not Merge Uncommon Metadata",
+                "Keep Path" : "false",
+                "Merge Strategy" : "Bin-Packing Algorithm",
+                "Attribute Strategy" : "Keep Only Common Attributes",
+                "FlowFile Insertion Strategy" : "Last in Bin",
+                "Compression Level" : "1",
+                "Maximum Number of Entries" : "1000",
+                "Maximum Number of Bins" : "5",
+                "Minimum Group Size" : "0 B",
+                "Tar Modified Time" : "${file.lastModifiedTime}",
+                "Delimiter Strategy" : "Do Not Use Delimiters",
+                "Merge Format" : "Binary Concatenation",
+                "Minimum Number of Entries" : "1"
+              },
+              "propertyDescriptors" : {
+                "Metadata Strategy" : {
+                  "displayName" : "Metadata Strategy",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Metadata Strategy",
+                  "sensitive" : false
+                },
+                "Keep Path" : {
+                  "displayName" : "Keep Path",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Keep Path",
+                  "sensitive" : false
+                },
+                "Maximum Group Size" : {
+                  "displayName" : "Maximum Group Size",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Maximum Group Size",
+                  "sensitive" : false
+                },
+                "Merge Strategy" : {
+                  "displayName" : "Merge Strategy",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Merge Strategy",
+                  "sensitive" : false
+                },
+                "Attribute Strategy" : {
+                  "displayName" : "Attribute Strategy",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Attribute Strategy",
+                  "sensitive" : false
+                },
+                "FlowFile Insertion Strategy" : {
+                  "displayName" : "FlowFile Insertion Strategy",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "FlowFile Insertion Strategy",
+                  "sensitive" : false
+                },
+                "Compression Level" : {
+                  "displayName" : "Compression Level",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Compression Level",
+                  "sensitive" : false
+                },
+                "Maximum Number of Entries" : {
+                  "displayName" : "Maximum Number of Entries",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Maximum Number of Entries",
+                  "sensitive" : false
+                },
+                "Maximum Number of Bins" : {
+                  "displayName" : "Maximum Number of Bins",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Maximum Number of Bins",
+                  "sensitive" : false
+                },
+                "Minimum Group Size" : {
+                  "displayName" : "Minimum Group Size",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Minimum Group Size",
+                  "sensitive" : false
+                },
+                "Tar Modified Time" : {
+                  "displayName" : "Tar Modified Time",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Tar Modified Time",
+                  "sensitive" : false
+                },
+                "Delimiter Strategy" : {
+                  "displayName" : "Delimiter Strategy",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Delimiter Strategy",
+                  "sensitive" : false
+                },
+                "Header" : {
+                  "displayName" : "Header",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Header",
+                  "resourceDefinition" : {
+                    "cardinality" : "SINGLE",
+                    "resourceTypes" : [ "FILE", "TEXT" ]
+                  },
+                  "sensitive" : false
+                },
+                "Merge Format" : {
+                  "displayName" : "Merge Format",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Merge Format",
+                  "sensitive" : false
+                },
+                "Max Bin Age" : {
+                  "displayName" : "Max Bin Age",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Max Bin Age",
+                  "sensitive" : false
+                },
+                "Footer" : {
+                  "displayName" : "Footer",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Footer",
+                  "resourceDefinition" : {
+                    "cardinality" : "SINGLE",
+                    "resourceTypes" : [ "FILE", "TEXT" ]
+                  },
+                  "sensitive" : false
+                },
+                "Correlation Attribute Name" : {
+                  "displayName" : "Correlation Attribute Name",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Correlation Attribute Name",
+                  "sensitive" : false
+                },
+                "Demarcator" : {
+                  "displayName" : "Demarcator",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Demarcator",
+                  "resourceDefinition" : {
+                    "cardinality" : "SINGLE",
+                    "resourceTypes" : [ "FILE", "TEXT" ]
+                  },
+                  "sensitive" : false
+                },
+                "Bin Termination Check" : {
+                  "displayName" : "Bin Termination Check",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Bin Termination Check",
+                  "sensitive" : false
+                },
+                "Minimum Number of Entries" : {
+                  "displayName" : "Minimum Number of Entries",
+                  "dynamic" : false,
+                  "identifiesControllerService" : false,
+                  "name" : "Minimum Number of Entries",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
               "autoTerminatedRelationships" : [ "failure", "success" ],
@@ -13409,8 +13569,8 @@
               "name" : "outtb1",
               "portFunction" : "STANDARD",
               "position" : {
-                "x" : 3784.0,
-                "y" : -112.0
+                "x" : 3944.0,
+                "y" : -136.0
               },
               "scheduledState" : "ENABLED",
               "type" : "OUTPUT_PORT"
@@ -14087,7 +14247,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"GateType\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateType\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateType\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -16636,7 +16796,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"Ticket\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Ticket\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Ticket\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -18683,7 +18843,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"Vendor\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Vendor\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Vendor\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -19996,7 +20156,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"TicketGroup\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketGroup\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketGroup\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -22043,7 +22203,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"Product\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Product\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Product\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -24090,7 +24250,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"TicketGroupProductMapping\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketGroupProductMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketGroupProductMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -26137,7 +26297,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"TicketTariff\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketTariff\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketTariff\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);\n",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -27874,7 +28034,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"TicketProductSlotMapping\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketProductSlotMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketProductSlotMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -29921,7 +30081,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"GateDetails\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateDetails\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -31968,7 +32128,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"GateTicketMapping\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateTicketMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateTicketMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -34015,7 +34175,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"HolidayInfo\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"HolidayInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"HolidayInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -36167,7 +36327,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"Inventory\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Inventory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Inventory\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -38214,7 +38374,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"Booking\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Booking\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Booking\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -40261,7 +40421,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"BookingDetails\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"BookingDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingDetails\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n      AND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\n      )\n    ORDER BY B.\"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -42308,7 +42468,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"PaymentHistory\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"PaymentHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"PaymentHistory\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -44355,7 +44515,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"BookingScan\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"BookingScan\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScan\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -44665,7 +44825,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\", \n  \"InQuantity\", \n  \"OutQuantity\", \n  \"Quantity\"\nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\", \n  \"InQuantity\", \n  \"OutQuantity\", \n  \"Quantity\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\n\tAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -46402,7 +46562,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"BookingScanHistory\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"BookingScanHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScanHistory\" B\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -46712,7 +46872,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\"\nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
+                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\n\tAnd EXISTS  (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -48449,7 +48609,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"DayClosureSummary\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"DayClosureSummary\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"DayClosureSummary\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -50496,7 +50656,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"DenominationDetail\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"DenominationDetail\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"DenominationDetail\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -52343,7 +52503,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"TicketType\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketType\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketType\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -54390,7 +54550,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"TicketTypeTicketMapping\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketTypeTicketMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketTypeTicketMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -56437,7 +56597,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"UserInfoScanMapping\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfoScanMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfoScanMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -58484,7 +58644,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"WebUserInfo\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"WebUserInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"WebUserInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -60534,7 +60694,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"GateTemperatureInfo\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateTemperatureInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateTemperatureInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -62581,7 +62741,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "update \"GateVibrationInfo\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateVibrationInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateVibrationInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -64277,39 +64437,6 @@
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
-              "bends" : [ {
-                "x" : 904.0,
-                "y" : -536.0
-              } ],
-              "componentType" : "CONNECTION",
-              "destination" : {
-                "comments" : "",
-                "groupId" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
-                "id" : "85ab8a2f-e7bf-33a8-86dc-8d665cb80c15",
-                "name" : "UpdateAttribute",
-                "type" : "PROCESSOR"
-              },
-              "flowFileExpiration" : "0 sec",
-              "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
-              "identifier" : "3ef7254d-6148-3272-baa2-feafaf0d21cd",
-              "labelIndex" : 0,
-              "loadBalanceCompression" : "DO_NOT_COMPRESS",
-              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-              "name" : "",
-              "partitioningAttribute" : "",
-              "prioritizers" : [ ],
-              "selectedRelationships" : [ "success" ],
-              "source" : {
-                "comments" : "",
-                "groupId" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
-                "id" : "f0011f78-e06b-3577-b335-2133406d5c08",
-                "name" : "ExecuteSQLRecord",
-                "type" : "PROCESSOR"
-              },
-              "zIndex" : 0
-            }, {
-              "backPressureDataSizeThreshold" : "1 GB",
-              "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
               "componentType" : "CONNECTION",
               "destination" : {
@@ -64442,7 +64569,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "72e16023-aed4-3d0b-b12d-924d92677108",
               "labelIndex" : 0,
@@ -64777,7 +64904,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "d2612804-eb7a-3c52-a5a1-833046ff1ad8",
               "labelIndex" : 0,
@@ -65165,7 +65292,7 @@
                 "y" : 520.0
               },
               "properties" : {
-                "SQL Statement" : "update \"Category\" set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "update \"Category\" set \"SyncStatusType\"=1  where \"Id\" in (\nSELECT \n  \"Id\" \nFROM \"Category\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}')\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n));",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -66664,7 +66791,7 @@
                 "Tar Modified Time" : "${file.lastModifiedTime}",
                 "Delimiter Strategy" : "Do Not Use Delimiters",
                 "Merge Format" : "Binary Concatenation",
-                "Minimum Number of Entries" : "1"
+                "Minimum Number of Entries" : "2"
               },
               "propertyDescriptors" : {
                 "Metadata Strategy" : {
@@ -68694,7 +68821,7 @@
             "Max Wait Time" : "30 sec",
             "Database Driver Class Name" : "org.postgresql.Driver",
             "Minimum Idle Connections" : "0",
-            "Max Total Connections" : "7",
+            "Max Total Connections" : "6",
             "Database Connection URL" : "jdbc:postgresql://59.93.107.242:5433,27.34.240.58:5433/bbbp_live",
             "Password Source" : "PASSWORD",
             "Time Between Eviction Runs" : "-1",
@@ -68851,7 +68978,7 @@
           "identifier" : "ad0e3409-019c-1000-1f2a-ee0f3843f155",
           "name" : "PgonlineDBCPConnectionPool",
           "properties" : {
-            "Maximum Idle Connections" : "8",
+            "Maximum Idle Connections" : "7",
             "Database Driver Locations" : "/opt/nifi/lib/postgresql-42.2.14.jar",
             "Max Wait Time" : "30 sec",
             "Database Driver Class Name" : "org.postgresql.Driver",
@@ -71453,7 +71580,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "update \"FinancialYear\" set \"SyncStatusType\"=1  where \"Id\" in (\nSELECT \n  \"Id\" \nFROM \"FinancialYear\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}')\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n));",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -74737,7 +74864,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfoCategoryMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfoCategoryMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -75793,7 +75920,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateType\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateType\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -78239,7 +78366,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Ticket\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Ticket\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -81552,7 +81679,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Vendor\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Vendor\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -82761,7 +82888,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Product\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Product\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -84845,7 +84972,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketGroup\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketGroup\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -88167,7 +88294,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketGroupProductMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketGroupProductMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -89521,7 +89648,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketTariff\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketTariff\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -91582,7 +91709,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketProductSlotMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketProductSlotMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -93529,7 +93656,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateDetails\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);\n",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -95355,7 +95482,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateTicketMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateTicketMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -99192,7 +99319,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 7  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Denomination\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Denomination\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -99765,7 +99892,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"HolidayInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"HolidayInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -101944,7 +102071,7 @@
             "parameterContextName" : "Inventory_offline",
             "position" : {
               "x" : -160.0,
-              "y" : 136.0
+              "y" : 144.0
             },
             "processGroups" : [ ],
             "processors" : [ {
@@ -103602,7 +103729,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Inventory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Inventory\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -105281,7 +105408,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"CardDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"CardDetails\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -106736,7 +106863,7 @@
                 "y" : -184.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfoCardDetailsMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfoCardDetailsMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -109526,7 +109653,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"StaffAccessInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"StaffAccessInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -111888,7 +112015,7 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2720.0,
+                "x" : 2912.0,
                 "y" : -176.0
               },
               "properties" : {
@@ -112345,11 +112472,11 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2280.0,
-                "y" : -168.0
+                "x" : 2376.0,
+                "y" : -224.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"Booking\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"Booking\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -114482,7 +114609,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"BookingDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingDetails\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n      AND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\n      )\n    ORDER BY B.\"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -114582,7 +114709,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"TicketGroupProductMappingId\", \n\"SlotId\", \n\"TicketQuantity\", \n\"TicketUnitCost\", \n\"TicketTotalCost\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"BBPTicketPerc\", \n\"BBPTicketTotalCost\", \n\"KSTDCTicketPerc\", \n\"KSTDCTicketTotalCost\", \n\"RefundedCharge\", \n\"RefundedCost\", \n\"CGst\", \n\"CGstValue\", \n\"Gst\", \n\"GstValue\", \n\"UnitDiscount\", \n\"UnitDiscountValue\", \n\"UnitServiceCharge\", \n\"NoOfSeatCount\", \n\"TicketTariffId\"  \nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"TicketGroupProductMappingId\", \n\"SlotId\", \n\"TicketQuantity\", \n\"TicketUnitCost\", \n\"TicketTotalCost\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"BBPTicketPerc\", \n\"BBPTicketTotalCost\", \n\"KSTDCTicketPerc\", \n\"KSTDCTicketTotalCost\", \n\"RefundedCharge\", \n\"RefundedCost\", \n\"CGst\", \n\"CGstValue\", \n\"Gst\", \n\"GstValue\", \n\"UnitDiscount\", \n\"UnitDiscountValue\", \n\"UnitServiceCharge\", \n\"NoOfSeatCount\", \n\"TicketTariffId\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE B.\"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -116146,10 +116273,10 @@
               "penaltyDuration" : "30 sec",
               "position" : {
                 "x" : 2296.0,
-                "y" : -136.0
+                "y" : -200.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"BookingScan\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScan\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);\n",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -116420,7 +116547,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\", \n\"InQuantity\", \n\"OutQuantity\", \n\"Quantity\"  \nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\", \n\"InQuantity\", \n\"OutQuantity\", \n\"Quantity\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -117859,8 +117986,8 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2712.0,
-                "y" : -136.0
+                "x" : 2816.0,
+                "y" : -192.0
               },
               "properties" : {
                 "SQL Statement" : "UPDATE public.\"Audit_Table\"\nSET\n \"End_Time\" = current_timestamp, \"KaZoo_Offline_Select_Count\" = ${select.count} ,\n \"Job_Status\" = 'SUCCESS'\nWHERE \"Start_Time\" =(select max(\"Start_Time\") from \"Audit_Table\");",
@@ -117963,7 +118090,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"PaymentStatusType\", \n\"PaymentStatusCode\", \n\"TransactionId\", \n\"PaymentMode\", \n\"Amount\", \n\"BookingId\", \n\"TransactionTs\", \n\"GatewayResponse\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"OrderGeneratedTs\", \n\"OrderResponse\"  \nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"PaymentStatusType\", \n\"PaymentStatusCode\", \n\"TransactionId\", \n\"PaymentMode\", \n\"Amount\", \n\"BookingId\", \n\"TransactionTs\", \n\"GatewayResponse\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"OrderGeneratedTs\", \n\"OrderResponse\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -118255,11 +118382,11 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2296.0,
-                "y" : -136.0
+                "x" : 2368.0,
+                "y" : -168.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"PaymentHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"PaymentHistory\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -119808,7 +119935,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\"    \nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\"    \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -120668,11 +120795,11 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2296.0,
-                "y" : -136.0
+                "x" : 2408.0,
+                "y" : -200.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"BookingScanHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScanHistory\" B\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -122935,7 +123062,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"DayClosureSummary\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"DayClosureSummary\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -124728,7 +124855,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"DenominationDetail\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"DenominationDetail\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -126396,7 +126523,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"ExtendedBookingDetail\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"ExtendedBookingDetail\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -129917,7 +130044,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketType\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketType\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -132186,7 +132313,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"TicketTypeTicketMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"TicketTypeTicketMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -133566,7 +133693,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfoScanMapping\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfoScanMapping\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -134774,7 +134901,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "b9189365-019c-1000-b716-d88abcc08e1a",
               "identifier" : "850d9604-ecc9-32c8-bf79-b345b50e1c90",
               "labelIndex" : 0,
@@ -134864,7 +134991,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "b9189365-019c-1000-b716-d88abcc08e1a",
               "identifier" : "bd3517a9-0817-3c2a-b88e-a4574ba946b1",
               "labelIndex" : 0,
@@ -134924,7 +135051,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "5 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "b9189365-019c-1000-b716-d88abcc08e1a",
               "identifier" : "d82a1eb0-d1a8-3c6a-848b-ec51944ecfaa",
               "labelIndex" : 0,
@@ -134954,7 +135081,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "1 min",
+              "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "b9189365-019c-1000-b716-d88abcc08e1a",
               "identifier" : "efe870b9-7287-3102-ad7f-5dc014fe9785",
               "labelIndex" : 1,
@@ -135041,8 +135168,8 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2712.0,
-                "y" : -136.0
+                "x" : 2792.0,
+                "y" : -152.0
               },
               "properties" : {
                 "SQL Statement" : "UPDATE public.\"Audit_Table\"\nSET\n \"End_Time\" = current_timestamp, \"KaZoo_Offline_Select_Count\" = ${select.count} ,\n \"Job_Status\" = 'SUCCESS'\nWHERE \"Start_Time\" =(select max(\"Start_Time\") from \"Audit_Table\");",
@@ -135139,8 +135266,8 @@
               "name" : "MergeContent",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 3176.0,
-                "y" : -128.0
+                "x" : 3528.0,
+                "y" : -136.0
               },
               "properties" : {
                 "Metadata Strategy" : "Do Not Merge Uncommon Metadata",
@@ -136600,11 +136727,11 @@
               "name" : "PutSQL",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 2288.0,
-                "y" : -168.0
+                "x" : 2320.0,
+                "y" : -184.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateTemperatureInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateTemperatureInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -136698,7 +136825,7 @@
               "name" : "UpdateAttribute",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 1904.0,
+                "x" : 1840.0,
                 "y" : -136.0
               },
               "properties" : {
@@ -138217,7 +138344,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"GateVibrationInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"GateVibrationInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -139851,7 +139978,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "update \"Category\" set \"SyncStatusType\"=1  where \"Id\" in (\nSELECT \n  \"Id\" \nFROM \"Category\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}')\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n));",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -143067,7 +143194,7 @@
                 "y" : -136.0
               },
               "properties" : {
-                "SQL Statement" : "update \"#{schema_name}\".\"#{table_name}\"  set \"SyncStatusType\"=1 where  \"SyncStatusType\" = 0  AND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    );",
+                "SQL Statement" : "UPDATE \"UserInfo\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT \"Id\"\n    FROM \"UserInfo\"\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            \"CreationTs\" <= '${sync.datetime}'\n         OR \"LastChangeTs\" <= '${sync.datetime}'\n      )\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -145155,7 +145282,7 @@
               "name" : "PutSQL",
               "type" : "PROCESSOR"
             },
-            "flowFileExpiration" : "1 min",
+            "flowFileExpiration" : "0 sec",
             "groupIdentifier" : "b54d4862-a8d2-3cb3-8c18-1bab70d67f17",
             "identifier" : "9bd1521b-77d4-3720-bd92-809c6580fc5a",
             "labelIndex" : 0,
@@ -147282,6 +147409,6 @@
   "snapshotMetadata" : {
     "author" : "31cea640-9d51-4c98-874f-1f3d7309c44e",
     "flowIdentifier" : "Bannerghattaflow",
-    "timestamp" : 1785315063262
+    "timestamp" : 1785907822586
   }
 }
