@@ -111,6 +111,7 @@
     "maxConcurrentTasks" : 1,
     "name" : "Bannerghatta",
     "outputPorts" : [ ],
+    "parameterContextName" : "mail_config",
     "position" : {
       "x" : 0.0,
       "y" : 0.0
@@ -5567,7 +5568,7 @@
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
           } ],
-          "parameterContextName" : "financialyear_param",
+          "parameterContextName" : "mail_config",
           "position" : {
             "x" : 768.0,
             "y" : -608.0
@@ -5883,6 +5884,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 11
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
+                "id" : "caa66d6d-019e-1000-3379-70b450879757",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
+              "identifier" : "ddc7dac8-93c0-3745-84ab-752161cbb184",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
+                "id" : "c6e97c44-1128-3103-85d1-d6d467f5420a",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -7126,7 +7157,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -7293,7 +7324,6 @@
                 "y" : -472.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -7310,7 +7340,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "vignesh.n@xenovex.com,kamali.d@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com,kamali.d@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -7979,6 +8009,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 43
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
+                "id" : "caad2f62-019e-1000-8599-1fe516cd2e4e",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ad2d4a53-019c-1000-6608-49b38d59724a",
+              "identifier" : "83648ad4-a4a5-32cd-b4ad-78528644a2e9",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ad2d4a53-019c-1000-6608-49b38d59724a",
+                "id" : "ad2d4a58-019c-1000-d4e1-9648011bae9b",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 44
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -10178,7 +10238,6 @@
                 "y" : 168.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -10195,7 +10254,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -10823,6 +10882,36 @@
                 "type" : "INPUT_PORT"
               },
               "zIndex" : 26
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
+                "id" : "caad91b6-019e-1000-7c1f-7dcd10ecb841",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ad8ac211-019c-1000-0740-3692f420537f",
+              "identifier" : "68f39f23-9bfe-3e20-a1e8-9070d6e857fb",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ad8ac211-019c-1000-0740-3692f420537f",
+                "id" : "ad8ac216-019c-1000-28ec-9904009f603c",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 27
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -11940,7 +12029,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -12873,7 +12962,6 @@
                 "y" : 224.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -12890,7 +12978,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -13101,6 +13189,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "adf359da-019c-1000-2747-e42ad172add3",
+                "id" : "caae4768-019e-1000-14d8-16a3c3da5149",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "adf359da-019c-1000-2747-e42ad172add3",
+              "identifier" : "525c2511-aa3c-3306-a4a4-5c96ba57a640",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "adf359da-019c-1000-2747-e42ad172add3",
+                "id" : "adf359e1-019c-1000-31ab-06756095bea5",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -14323,7 +14441,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -14920,7 +15038,6 @@
                 "y" : 192.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -14937,7 +15054,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -15578,6 +15695,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 11
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ae18e187-019c-1000-efd5-1a0e7a661522",
+                "id" : "caae788b-019e-1000-bab8-fe10c49ed22e",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ae18e187-019c-1000-efd5-1a0e7a661522",
+              "identifier" : "e4a4b403-706c-3404-b12f-601eade8606a",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ae18e187-019c-1000-efd5-1a0e7a661522",
+                "id" : "ae18e18a-019c-1000-bc7d-6638386c8aae",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             } ],
             "controllerServices" : [ ],
             "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -15999,7 +16146,7 @@
               "type" : "org.apache.nifi.processors.standard.LogAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -16967,7 +17114,6 @@
                 "y" : 272.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -16984,7 +17130,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -17166,6 +17312,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ae1a4a55-019c-1000-74a5-c87ec24563f1",
+                "id" : "caaeae91-019e-1000-f888-fe00e4d2c1ef",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ae1a4a55-019c-1000-74a5-c87ec24563f1",
+              "identifier" : "6eca006a-f113-35ca-95d2-5b04e1f45860",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ae1a4a55-019c-1000-74a5-c87ec24563f1",
+                "id" : "ae1a4a58-019c-1000-41d6-2b13f121497b",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -18046,7 +18222,7 @@
               "type" : "org.apache.nifi.processors.standard.LogAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -19014,7 +19190,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -19031,7 +19206,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -19642,6 +19817,36 @@
                 "type" : "INPUT_PORT"
               },
               "zIndex" : 14
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ae55ea62-019c-1000-b413-16153759e82b",
+                "id" : "caaf1f78-019e-1000-f8c4-5026fabc4aaf",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ae55ea62-019c-1000-b413-16153759e82b",
+              "identifier" : "b738458f-8737-31c0-84e9-2350ba19adb6",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ae55ea62-019c-1000-b413-16153759e82b",
+                "id" : "ae55ea67-019c-1000-f5f6-bc57e1a575db",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -20330,7 +20535,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -21061,7 +21266,6 @@
                 "y" : 319.07181479557016
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -21078,7 +21282,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -21260,6 +21464,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ae55f470-019c-1000-b14d-7b3420cfcefd",
+                "id" : "caaef49d-019e-1000-0c47-fa9bc0ca3d9c",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ae55f470-019c-1000-b14d-7b3420cfcefd",
+              "identifier" : "0494462c-0150-30fa-a1a6-d48518247aca",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ae55f470-019c-1000-b14d-7b3420cfcefd",
+                "id" : "ae55f475-019c-1000-807d-259848856271",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ {
@@ -22377,7 +22611,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -23108,7 +23342,6 @@
                 "y" : 319.07181479557016
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -23125,7 +23358,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -23336,6 +23569,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ae5618a0-019c-1000-49d1-ec1dc97462a6",
+                "id" : "caaf521d-019e-1000-e26b-e2c65d61c055",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ae5618a0-019c-1000-49d1-ec1dc97462a6",
+              "identifier" : "7e897304-b995-35eb-933d-bcba77aad67b",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ae5618a0-019c-1000-49d1-ec1dc97462a6",
+                "id" : "ae5618a5-019c-1000-55c5-a193acbbf1ee",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -24424,7 +24687,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -25155,7 +25418,6 @@
                 "y" : 208.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -25172,7 +25434,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -25354,6 +25616,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ae565daa-019c-1000-8ea8-eb293a63e408",
+                "id" : "caaf884e-019e-1000-2e22-347c352f1c67",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ae565daa-019c-1000-8ea8-eb293a63e408",
+              "identifier" : "55178d00-3c02-3f9e-aa08-0043b3091723",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ae565daa-019c-1000-8ea8-eb293a63e408",
+                "id" : "ae565daf-019c-1000-e96e-19102ab743b3",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ {
@@ -26471,7 +26763,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -27202,7 +27494,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -27219,7 +27510,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -27430,6 +27721,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b275e22f-019c-1000-bf63-2d55742912ad",
+                "id" : "caafe115-019e-1000-f9b4-7e391b0e92fd",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b275e22f-019c-1000-bf63-2d55742912ad",
+              "identifier" : "3ca5e6ea-11d9-3545-800a-683fbc46529d",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b275e22f-019c-1000-bf63-2d55742912ad",
+                "id" : "b275e234-019c-1000-cbaa-8fd6b13155de",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -28383,7 +28704,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -29252,7 +29573,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -29269,7 +29589,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -29480,6 +29800,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b275ed98-019c-1000-f243-59b26cc54e1a",
+                "id" : "cab0251e-019e-1000-a483-48ff4dd85d2b",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b275ed98-019c-1000-f243-59b26cc54e1a",
+              "identifier" : "4053011d-3bdb-3006-804f-0ffa8e105ed7",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b275ed98-019c-1000-f243-59b26cc54e1a",
+                "id" : "b275ed9d-019c-1000-fc0c-f757a5a738de",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -30430,7 +30780,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -31299,7 +31649,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -31316,7 +31665,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -31498,6 +31847,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b275f957-019c-1000-2586-81d882d57a50",
+                "id" : "cab2fecb-019e-1000-6144-aee535329f34",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b275f957-019c-1000-2586-81d882d57a50",
+              "identifier" : "43aad0aa-e4dc-32c7-b2d3-a0ec4a63b001",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b275f957-019c-1000-2586-81d882d57a50",
+                "id" : "b275f95c-019c-1000-8a56-c9a09283965c",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -32477,7 +32856,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -33346,7 +33725,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -33363,7 +33741,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -33574,6 +33952,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2760660-019c-1000-f687-7680140ca676",
+                "id" : "cab32c1b-019e-1000-8737-171916f9b25c",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2760660-019c-1000-f687-7680140ca676",
+              "identifier" : "a2de0bfe-bcfb-3680-8dce-690bce1144ac",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2760660-019c-1000-f687-7680140ca676",
+                "id" : "b2760665-019c-1000-c1ef-8b4d7cda92f7",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -34524,7 +34932,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -35393,7 +35801,6 @@
                 "y" : 319.07181479557016
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -35410,7 +35817,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -35592,6 +35999,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2761bed-019c-1000-6ea4-7b4f146d90be",
+                "id" : "cab369d0-019e-1000-b330-576d4e376870",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2761bed-019c-1000-6ea4-7b4f146d90be",
+              "identifier" : "7a9d3736-928a-3794-a833-d6a2f4b533b5",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2761bed-019c-1000-6ea4-7b4f146d90be",
+                "id" : "b2761bf2-019c-1000-9995-194bc0547909",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -36613,7 +37050,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -37443,7 +37880,6 @@
                 "y" : 319.07179823513763
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -37460,7 +37896,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -38085,6 +38521,36 @@
               },
               "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
+              "identifier" : "b65fa96d-f7d8-37c2-aad6-287cefc47b21",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2762797-019c-1000-a7ab-710426a42ab6",
+                "id" : "b276279c-019c-1000-ed05-0ebdcd69c6b9",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2762797-019c-1000-a7ab-710426a42ab6",
+                "id" : "cab38cc5-019e-1000-4f80-0383da3515cd",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "ca73c813-9ea4-3661-9408-95740a862fe4",
               "labelIndex" : 0,
               "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -38660,7 +39126,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -39490,7 +39956,6 @@
                 "y" : 232.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -39507,7 +39972,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -39689,6 +40154,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b276341c-019c-1000-c805-e940b600d71e",
+                "id" : "cab3cd90-019e-1000-d0b7-bac2a7248d13",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
+              "identifier" : "174060c4-b9a3-3d8c-9f6f-9a1afcfcef2a",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b276341c-019c-1000-c805-e940b600d71e",
+                "id" : "b2763421-019c-1000-e2ec-43844fa3e38f",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -40707,7 +41202,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -41537,7 +42032,6 @@
                 "y" : 319.07179823513763
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -41554,7 +42048,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -42179,6 +42673,36 @@
               },
               "flowFileExpiration" : "0 sec",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
+              "identifier" : "d0dee190-a6a1-3a30-ae5f-681e1ee63481",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b27642b6-019c-1000-dcf0-0050dfb38017",
+                "id" : "b27642bb-019c-1000-908f-819f2c75e31f",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b27642b6-019c-1000-dcf0-0050dfb38017",
+                "id" : "cab3fcf0-019e-1000-b9d6-581ed0b91a18",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "efab8834-7a4a-3c8b-a44b-1ecf8a480220",
               "labelIndex" : 0,
               "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -42280,7 +42804,7 @@
                 "Tar Modified Time" : "${file.lastModifiedTime}",
                 "Delimiter Strategy" : "Do Not Use Delimiters",
                 "Merge Format" : "Binary Concatenation",
-                "Minimum Number of Entries" : "2"
+                "Minimum Number of Entries" : "3"
               },
               "propertyDescriptors" : {
                 "Metadata Strategy" : {
@@ -42754,7 +43278,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -43584,7 +44108,6 @@
                 "y" : 315.75265451588064
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -43601,7 +44124,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -43812,6 +44335,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2764db6-019c-1000-678d-b217faa7e8c4",
+                "id" : "cab4236b-019e-1000-a05a-a3c698b466a9",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
+              "identifier" : "98dbd20e-9022-36ce-8df2-07be2663819d",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2764db6-019c-1000-678d-b217faa7e8c4",
+                "id" : "b2764dbb-019c-1000-713a-0b848b78a50b",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -44801,7 +45354,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -45631,7 +46184,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -45648,7 +46200,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -45859,6 +46411,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 27
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2765c19-019c-1000-b84d-b21d51a48310",
+                "id" : "cab44f36-019e-1000-14e0-8db171afb55e",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
+              "identifier" : "2d118a3d-5be7-3c16-b862-a65043478577",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2765c19-019c-1000-b84d-b21d51a48310",
+                "id" : "b2765c1e-019c-1000-42df-4b02e6402e07",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 30
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -46809,7 +47391,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -47639,7 +48221,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -47656,7 +48237,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -48297,6 +48878,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 11
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2766dad-019c-1000-b232-e30057d29926",
+                "id" : "cab478e3-019e-1000-c733-624ec70dd826",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2766dad-019c-1000-b232-e30057d29926",
+              "identifier" : "dcbd6056-785a-3409-b2a9-994d03edb102",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2766dad-019c-1000-b232-e30057d29926",
+                "id" : "b2766db2-019c-1000-065e-b5eaf1a59331",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             } ],
             "controllerServices" : [ ],
             "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -48856,7 +49467,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -49686,7 +50297,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -49703,7 +50313,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -49885,6 +50495,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2767c48-019c-1000-e1ac-682102ba95db",
+                "id" : "cab4a00f-019e-1000-31f0-ccb2bffdf7c0",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2767c48-019c-1000-e1ac-682102ba95db",
+              "identifier" : "2a60ebeb-40d8-312e-8521-021bdfdbab77",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2767c48-019c-1000-e1ac-682102ba95db",
+                "id" : "b2767c4d-019c-1000-7a7a-e266f9f87b2a",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -50903,7 +51543,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -51733,7 +52373,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -51750,7 +52389,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -51932,6 +52571,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b27693af-019c-1000-d5d4-8f06b0f73ab6",
+                "id" : "cab4c26c-019e-1000-d6dc-d56aacbb0284",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b27693af-019c-1000-d5d4-8f06b0f73ab6",
+              "identifier" : "2419fc6c-9bec-34c8-b466-da0be1a9f243",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b27693af-019c-1000-d5d4-8f06b0f73ab6",
+                "id" : "b27693b5-019c-1000-990c-32e1215fa341",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -53017,7 +53686,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -53780,7 +54449,6 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -53797,7 +54465,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -53979,6 +54647,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b2769e50-019c-1000-488a-bee0887ca1b2",
+                "id" : "cab4e8de-019e-1000-802a-61a931240be2",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b2769e50-019c-1000-488a-bee0887ca1b2",
+              "identifier" : "1726ceb1-990a-38ee-8127-cc9657dee6b7",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b2769e50-019c-1000-488a-bee0887ca1b2",
+                "id" : "b2769e56-019c-1000-68d0-bbd2d1986990",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -55064,7 +55762,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -55827,7 +56525,6 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -55844,7 +56541,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -56026,6 +56723,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b276a6a4-019c-1000-5128-1cf219f85ef9",
+                "id" : "cab50ff4-019e-1000-a2f3-62efbbbad51f",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b276a6a4-019c-1000-5128-1cf219f85ef9",
+              "identifier" : "4e49b0c0-42e8-3881-aeeb-fa5edc3dfc36",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b276a6a4-019c-1000-5128-1cf219f85ef9",
+                "id" : "b276a6aa-019c-1000-05cf-1e0c209f66a3",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -57111,7 +57838,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -57874,7 +58601,6 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -57891,7 +58617,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -58532,6 +59258,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 7
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b276b205-019c-1000-e66a-1ed724d7c256",
+                "id" : "cab53ec1-019e-1000-c955-a64acf4a3276",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b276b205-019c-1000-e66a-1ed724d7c256",
+              "identifier" : "d2174776-8b05-3e00-8701-61304aa8a39e",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b276b205-019c-1000-e66a-1ed724d7c256",
+                "id" : "b276b20b-019c-1000-e996-aa5857381fdf",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             } ],
             "controllerServices" : [ ],
             "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -59158,7 +59914,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -59921,7 +60677,6 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -59938,7 +60693,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -60149,6 +60904,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 24
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b276bd09-019c-1000-c52e-8b315a645ade",
+                "id" : "cab5748d-019e-1000-3d63-19fb46b9e537",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b276bd09-019c-1000-c52e-8b315a645ade",
+              "identifier" : "a60fb9ec-3d40-383b-8122-3f796df73c44",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b276bd09-019c-1000-c52e-8b315a645ade",
+                "id" : "b276bd0f-019c-1000-0f63-61c75c1e6203",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -61208,7 +61993,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -61971,7 +62756,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -61988,7 +62772,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -62170,6 +62954,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b276ccb7-019c-1000-180f-2646b907dfe5",
+                "id" : "cab59f4f-019e-1000-5152-d5dc9d1bd9cf",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b276ccb7-019c-1000-180f-2646b907dfe5",
+              "identifier" : "2868923f-6252-34ee-b68d-ddad683cfacc",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b276ccb7-019c-1000-180f-2646b907dfe5",
+                "id" : "b276ccbd-019c-1000-6fce-cb6f4f61be09",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 25
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -63255,7 +64069,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -64018,7 +64832,6 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -64035,7 +64848,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -64217,6 +65030,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
+                "id" : "caac7553-019e-1000-0b03-cf3e169ac827",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
+              "identifier" : "0aa2057b-bd83-3dbb-a2aa-d3767df0dd70",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
+                "id" : "f0011f78-e06b-3577-b335-2133406d5c08",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 46
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -66543,7 +67386,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com,kamali.d@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -70994,6 +71837,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "6b3cf1e6-6a53-37cf-904f-89deea3f4bc8",
+                "id" : "cab60b2a-019e-1000-2d43-40c3436c124d",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6b3cf1e6-6a53-37cf-904f-89deea3f4bc8",
+              "identifier" : "33672379-d886-33d1-82d2-b0db9c61adf7",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6b3cf1e6-6a53-37cf-904f-89deea3f4bc8",
+                "id" : "7887dca9-9007-35ab-ad85-c1ac94f5a0d5",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 30
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6b3cf1e6-6a53-37cf-904f-89deea3f4bc8",
                 "id" : "a4971b53-04c5-34ab-bbdf-28a6b96a2adf",
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
@@ -71998,7 +72871,7 @@
               "type" : "org.apache.nifi.processors.standard.LogAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -72504,7 +73377,6 @@
                 "y" : 120.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -72521,7 +73393,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -73112,6 +73984,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 28
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b4ba3cca-019c-1000-5a2e-1cb4b7165224",
+                "id" : "cab6fbb6-019e-1000-c20d-406d52c27f97",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b4ba3cca-019c-1000-5a2e-1cb4b7165224",
+              "identifier" : "9a194798-2ee7-3724-9686-2f9ee087f167",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b4ba3cca-019c-1000-5a2e-1cb4b7165224",
+                "id" : "80751af8-f507-373f-9f7a-094bd99609e4",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -74074,7 +74976,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -74353,7 +75255,6 @@
                 "y" : 144.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -74370,7 +75271,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -75324,6 +76225,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b4c6b9c1-019c-1000-5735-4ac485348f4d",
+                "id" : "cab72c41-019e-1000-b948-6a14ea5acf25",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b4c6b9c1-019c-1000-5735-4ac485348f4d",
+              "identifier" : "879c9dee-0df3-3656-aef0-b5ed9aed83f7",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b4c6b9c1-019c-1000-5735-4ac485348f4d",
+                "id" : "b492fa95-67bf-3890-8ac3-1b4656b04bab",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b4c6b9c1-019c-1000-5735-4ac485348f4d",
                 "id" : "b492fa95-67bf-3890-8ac3-1b4656b04bab",
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
@@ -76191,7 +77122,7 @@
               "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -76358,7 +77289,6 @@
                 "y" : 224.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -76375,7 +77305,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -77491,6 +78421,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b4ceee78-019c-1000-825d-5e6fd680bedf",
+                "id" : "cab76810-019e-1000-b745-4eaf024a2969",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b4ceee78-019c-1000-825d-5e6fd680bedf",
+              "identifier" : "68a85595-f33c-3556-886f-e26697fd7d04",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b4ceee78-019c-1000-825d-5e6fd680bedf",
+                "id" : "c807884f-c6c0-3cbb-84c8-48bffa53e92d",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -79152,7 +80112,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -79319,7 +80279,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -79336,7 +80295,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -79876,6 +80835,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b740dbaf-019c-1000-1fa2-52e57d46e52f",
+                "id" : "cab7a7b0-019e-1000-312f-d2d6085c8db5",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b740dbaf-019c-1000-1fa2-52e57d46e52f",
+              "identifier" : "c3d34ed2-867d-3ec7-bde8-56a52921c9aa",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b740dbaf-019c-1000-1fa2-52e57d46e52f",
+                "id" : "c856435d-e64d-3b8f-aac7-aeeadd2edfac",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -81161,7 +82150,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -81179,8 +82168,8 @@
               "name" : "ExecuteSQLRecord",
               "penaltyDuration" : "30 sec",
               "position" : {
-                "x" : 840.0,
-                "y" : -112.0
+                "x" : 832.0,
+                "y" : -120.0
               },
               "properties" : {
                 "Set Auto Commit" : "true",
@@ -81328,7 +82317,6 @@
                 "y" : 216.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -81345,7 +82333,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -82028,6 +83016,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b78e4d37-019c-1000-2790-ab2e5ca59956",
+                "id" : "cab7cfeb-019e-1000-fc8e-0be1b2080006",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b78e4d37-019c-1000-2790-ab2e5ca59956",
+              "identifier" : "c7ed2c31-c36b-396f-aacb-352c4e6e1296",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b78e4d37-019c-1000-2790-ab2e5ca59956",
+                "id" : "1392cb51-ccb6-3dbc-aa13-6e402e8e539d",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b78e4d37-019c-1000-2790-ab2e5ca59956",
                 "id" : "1392cb51-ccb6-3dbc-aa13-6e402e8e539d",
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
@@ -82191,7 +83209,7 @@
             },
             "processGroups" : [ ],
             "processors" : [ {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -83729,7 +84747,6 @@
                 "y" : 224.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -83746,7 +84763,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -84115,6 +85132,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b7956965-019c-1000-d5af-91844b29fe20",
+                "id" : "cab7f813-019e-1000-3459-42b4e9ffe5f9",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b7956965-019c-1000-d5af-91844b29fe20",
+              "identifier" : "797ea4c4-2300-3966-8f9b-eade19dd2cfe",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b7956965-019c-1000-d5af-91844b29fe20",
+                "id" : "1aef9162-40fa-3883-89eb-09a1c8e860d9",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b7956965-019c-1000-d5af-91844b29fe20",
                 "id" : "34075319-5b4a-36ec-8fc3-a5a4edceaa70",
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
@@ -84396,7 +85443,7 @@
             },
             "processGroups" : [ ],
             "processors" : [ {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -85836,7 +86883,6 @@
                 "y" : 232.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -85853,7 +86899,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -86550,6 +87596,36 @@
                 "type" : "INPUT_PORT"
               },
               "zIndex" : 29
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b795d621-019c-1000-7d83-348bca0188bc",
+                "id" : "cab82ebe-019e-1000-1722-968107ff3cf4",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b795d621-019c-1000-7d83-348bca0188bc",
+              "identifier" : "d38e2808-53e0-3cae-8a4d-a51459deca7a",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b795d621-019c-1000-7d83-348bca0188bc",
+                "id" : "ae14e4d8-4f86-3f40-bd5c-c5931a7f06fa",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             } ],
             "controllerServices" : [ ],
             "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -87623,7 +88699,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -87888,7 +88964,6 @@
                 "y" : 288.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -87905,7 +88980,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -88546,6 +89621,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b79680f5-019c-1000-2acb-6248ddaf8faa",
+                "id" : "cab85aca-019e-1000-89fb-b00300ea0c3d",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b79680f5-019c-1000-2acb-6248ddaf8faa",
+              "identifier" : "920451af-978d-326a-8725-aa99135dd7c0",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b79680f5-019c-1000-2acb-6248ddaf8faa",
+                "id" : "7e4b731c-3d81-329c-9df4-d19f54f96c59",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -89271,7 +90376,7 @@
               "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -90344,7 +91449,6 @@
                 "y" : 264.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -90361,7 +91465,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -90572,6 +91676,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 30
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b7edc100-019c-1000-c6a4-3e89d148dba3",
+                "id" : "cab88c3d-019e-1000-90e9-dd2070c88dfb",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b7edc100-019c-1000-c6a4-3e89d148dba3",
+              "identifier" : "265585d4-e86f-3572-88a0-c255836923ff",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b7edc100-019c-1000-c6a4-3e89d148dba3",
+                "id" : "22d747fd-5b72-3c24-91d0-77946960a987",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -91422,7 +92556,7 @@
               "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -91880,7 +93014,6 @@
                 "y" : 288.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -91897,7 +93030,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -92867,6 +94000,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 23
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b7f269ed-019c-1000-34ff-186e87f5dd87",
+                "id" : "cab8b67f-019e-1000-fb97-1791811976b7",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b7f269ed-019c-1000-34ff-186e87f5dd87",
+              "identifier" : "56457c3f-012f-3e7f-9b73-1edbe6a6a2c2",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b7f269ed-019c-1000-34ff-186e87f5dd87",
+                "id" : "97243408-02c7-3f37-8d37-2564ee7d049a",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -93864,7 +95027,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -94184,7 +95347,6 @@
                 "y" : 256.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -94201,7 +95363,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -95348,6 +96510,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b7f2ecf8-019c-1000-a28c-68869b8c181d",
+                "id" : "cab8f8b9-019e-1000-0606-010c7f40b817",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b7f2ecf8-019c-1000-a28c-68869b8c181d",
+              "identifier" : "e547ff5e-e106-3c3b-ae4c-93c77eb6df9e",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b7f2ecf8-019c-1000-a28c-68869b8c181d",
+                "id" : "55582d27-8747-3c8e-8b6d-30255111dd2a",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b7f2ecf8-019c-1000-a28c-68869b8c181d",
                 "id" : "7f35b6ee-c009-3fda-aa2d-530f8614c039",
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
@@ -95617,7 +96809,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -96549,7 +97741,6 @@
                 "y" : 240.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -96566,7 +97757,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -97434,6 +98625,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b7f44e24-019c-1000-bdad-0dfce2b8de94",
+                "id" : "cab92103-019e-1000-d2bd-df8ac07b7aa1",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b7f44e24-019c-1000-bdad-0dfce2b8de94",
+              "identifier" : "9a4d8805-c983-362f-9ece-5cbc2405b58c",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b7f44e24-019c-1000-bdad-0dfce2b8de94",
+                "id" : "754a851c-3afe-39d9-b378-eb4f27edab70",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b7f44e24-019c-1000-bdad-0dfce2b8de94",
                 "id" : "99e72716-f95a-3878-9d7b-b58d0af8e346",
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
@@ -97917,7 +99138,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -98866,7 +100087,6 @@
                 "y" : 280.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -98883,7 +100103,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -99579,6 +100799,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b8036e80-019c-1000-86e4-32f1c14770a9",
+                "id" : "cab94979-019e-1000-4ce9-62f4e30e2e8b",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b8036e80-019c-1000-86e4-32f1c14770a9",
+              "identifier" : "7e19e628-d505-3b2c-9ce1-a4a825879569",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b8036e80-019c-1000-86e4-32f1c14770a9",
+                "id" : "777c277f-f481-3a4b-83d0-5d5983f9a480",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b8036e80-019c-1000-86e4-32f1c14770a9",
                 "id" : "91ba36f6-a285-3afa-ba72-584d5fba72fb",
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
@@ -100180,7 +101430,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -101257,7 +102507,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -101274,7 +102523,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -101926,6 +103175,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 28
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b80434b3-019c-1000-4cdf-cf5228a5d3e1",
+                "id" : "cab96ef9-019e-1000-0619-c9bdf5d7caa8",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b80434b3-019c-1000-4cdf-cf5228a5d3e1",
+              "identifier" : "fcb8f969-dba1-3bff-a0f3-a4a181cdf372",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b80434b3-019c-1000-4cdf-cf5228a5d3e1",
+                "id" : "57f5ae6d-8186-3833-a7c5-79b89519157a",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -102643,7 +103922,7 @@
               "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -103476,7 +104755,6 @@
                 "y" : 208.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -103493,7 +104771,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -103981,6 +105259,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 25
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b80492b7-019c-1000-b2c4-608f38705279",
+                "id" : "cab9a95c-019e-1000-14da-5fc44964da24",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b80492b7-019c-1000-b2c4-608f38705279",
+              "identifier" : "63097ae0-d780-3545-bddd-3f882f16ccde",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b80492b7-019c-1000-b2c4-608f38705279",
+                "id" : "a0084790-291f-3be7-bbe2-8e179b4dc9c8",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -105202,7 +106510,7 @@
               "type" : "org.apache.nifi.processors.standard.PutDatabaseRecord",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -105579,7 +106887,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -105596,7 +106903,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -106215,6 +107522,36 @@
                 "type" : "INPUT_PORT"
               },
               "zIndex" : 29
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b811b7b0-019c-1000-ac49-af2b82debe8a",
+                "id" : "cab9dae3-019e-1000-0c48-94cd21c3c9c2",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b811b7b0-019c-1000-ac49-af2b82debe8a",
+              "identifier" : "7afa7452-3775-3a48-823f-7a1ac5c6b150",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b811b7b0-019c-1000-ac49-af2b82debe8a",
+                "id" : "fe8a30cb-e8cc-3061-9da0-894acfe17ac0",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -107685,7 +109022,6 @@
                 "y" : 288.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -107702,7 +109038,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -107958,7 +109294,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -108212,6 +109548,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 19
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b8127bce-019c-1000-ce66-71a5e78e7c28",
+                "id" : "caba1d6f-019e-1000-7012-951871bcfc2d",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b8127bce-019c-1000-ce66-71a5e78e7c28",
+              "identifier" : "17a213fd-23f7-3a3d-99de-2b55f058d1b0",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b8127bce-019c-1000-ce66-71a5e78e7c28",
+                "id" : "f999ecfb-21c0-331f-b70c-194257345b03",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -109963,7 +111329,6 @@
                 "y" : 208.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -109980,7 +111345,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -110236,7 +111601,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -110567,6 +111932,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
+                "id" : "caba578a-019e-1000-f297-b8f256ab501f",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
+              "identifier" : "8eb19aa9-8c3a-31cc-af38-c44677a3085c",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
+                "id" : "bdadd8c6-a118-318a-8032-974cd092e5dd",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -112056,7 +113451,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -112075,7 +113470,7 @@
               "penaltyDuration" : "30 sec",
               "position" : {
                 "x" : 816.0,
-                "y" : -184.0
+                "y" : -168.0
               },
               "properties" : {
                 "Set Auto Commit" : "true",
@@ -112223,7 +113618,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -112240,7 +113634,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -112950,6 +114344,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 21
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
+                "id" : "caba7d71-019e-1000-ab7c-de533ec883af",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
+              "identifier" : "c8541562-6fba-3dda-867e-841a0f6215f1",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
+                "id" : "f4dd6ab9-84f6-31a0-a3f1-8b48a15204a0",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -114185,7 +115609,6 @@
                 "y" : 280.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -114202,7 +115625,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -114646,7 +116069,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -114917,6 +116340,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 23
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b8275026-019c-1000-2c20-97083cac5c40",
+                "id" : "cababb27-019e-1000-51b1-c0a1cebd6388",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
+              "identifier" : "699c4804-5a69-3afe-bbaa-dee2a4bcb3c3",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b8275026-019c-1000-2c20-97083cac5c40",
+                "id" : "b345b64e-2156-3039-b518-27fa64e1df1e",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -116484,7 +117937,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -116804,7 +118257,6 @@
                 "y" : 272.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -116821,7 +118273,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -117062,6 +118514,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
+                "id" : "cabaebe6-019e-1000-5f48-0ca3bcd6e4ab",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
+              "identifier" : "1f63ed52-372c-3344-9edd-f4f690cf542f",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
+                "id" : "3c38057c-b51e-3079-ad34-80a41fb39a51",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -118027,7 +119509,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -119009,7 +120491,6 @@
                 "y" : 240.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -119026,7 +120507,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -119267,6 +120748,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 19
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b843014a-019c-1000-cd15-ac7108a39fe3",
+                "id" : "cabb147e-019e-1000-bf7a-283b17f2bf74",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
+              "identifier" : "14be8c3e-6f71-3331-b02b-9a3585ca3993",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b843014a-019c-1000-cd15-ac7108a39fe3",
+                "id" : "65cda151-6a9b-3f2b-a72e-df3a72218b55",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -119872,7 +121383,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -120465,7 +121976,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -120482,7 +121992,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -121719,6 +123229,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b88a4cb2-019c-1000-8541-0956b856773a",
+                "id" : "cabb3b54-019e-1000-0bbc-84a5c897b633",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b88a4cb2-019c-1000-8541-0956b856773a",
+              "identifier" : "aa520a5d-47b7-39ab-8a96-a65c6fdec2d5",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b88a4cb2-019c-1000-8541-0956b856773a",
+                "id" : "5a59a278-9f98-3771-8e43-ed06344895b2",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b88a4cb2-019c-1000-8541-0956b856773a",
                 "id" : "6286b72b-3608-37e6-b858-a22fb6c7bb9c",
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
@@ -122219,7 +123759,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -123419,7 +124959,6 @@
                 "y" : 288.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -123436,7 +124975,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -123618,6 +125157,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b88e9b21-019c-1000-58a4-58baf9a86622",
+                "id" : "cabb624e-019e-1000-314e-36b2a84a6500",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b88e9b21-019c-1000-58a4-58baf9a86622",
+              "identifier" : "0485c268-8c6d-31a6-b214-1e21e1f46a3e",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b88e9b21-019c-1000-58a4-58baf9a86622",
+                "id" : "a61e16b9-1471-3ad7-99e3-7aa6a5af723d",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -124892,7 +126461,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -125317,7 +126886,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -125334,7 +126902,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -126218,6 +127786,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b903a3c2-019c-1000-668c-1e1ab32d75aa",
+                "id" : "cabb8dba-019e-1000-1541-11cf429f275c",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b903a3c2-019c-1000-668c-1e1ab32d75aa",
+              "identifier" : "ada59528-2404-3326-8c80-d6edcd329fc2",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b903a3c2-019c-1000-668c-1e1ab32d75aa",
+                "id" : "a47f770a-4021-3c18-88dc-bbe86dd83287",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b903a3c2-019c-1000-668c-1e1ab32d75aa",
                 "id" : "9926b064-f066-3934-8959-0b3e1d82099c",
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
@@ -127052,7 +128650,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -127629,7 +129227,6 @@
                 "y" : 224.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -127646,7 +129243,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -128028,6 +129625,36 @@
             "comments" : "",
             "componentType" : "PROCESS_GROUP",
             "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b90746b6-019c-1000-1963-d17c531714a1",
+                "id" : "cabbbb51-019e-1000-9e25-73c9b74210fd",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b90746b6-019c-1000-1963-d17c531714a1",
+              "identifier" : "0480af66-dec0-37a0-9d6b-2255b3f34ddf",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b90746b6-019c-1000-1963-d17c531714a1",
+                "id" : "e8de84bf-8988-303b-a794-660a15f0f041",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
               "bends" : [ ],
@@ -129533,7 +131160,6 @@
                 "y" : 248.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -129550,7 +131176,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -130081,7 +131707,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -130411,6 +132037,36 @@
                 "type" : "PROCESSOR"
               },
               "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b90efe2d-019c-1000-751a-91c327b54716",
+                "id" : "cabbdf94-019e-1000-f4ad-c2508b3c31ea",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b90efe2d-019c-1000-751a-91c327b54716",
+              "identifier" : "4825ffe5-a37a-3f4e-bf6d-b08358b55007",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b90efe2d-019c-1000-751a-91c327b54716",
+                "id" : "3728570d-349e-3254-a6d0-a968fbbb063a",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
             }, {
               "backPressureDataSizeThreshold" : "1 GB",
               "backPressureObjectThreshold" : 10000,
@@ -131225,7 +132881,7 @@
               "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -131948,7 +133604,6 @@
                 "y" : 232.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -131965,7 +133620,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -132833,6 +134488,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b9126251-019c-1000-9c3d-de7cbd312879",
+                "id" : "cabc0e22-019e-1000-e263-00723ee609d8",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b9126251-019c-1000-9c3d-de7cbd312879",
+              "identifier" : "e7ad4fb2-80d1-311e-abb1-6773edc5e5e5",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b9126251-019c-1000-9c3d-de7cbd312879",
+                "id" : "61a5d447-8043-34c9-a89f-d8360c4c02a0",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b9126251-019c-1000-9c3d-de7cbd312879",
                 "id" : "7b6f7c40-e55d-3d43-9484-ef2552cc7a70",
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
@@ -133218,7 +134903,7 @@
               "type" : "org.apache.nifi.processors.standard.MergeContent",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -133752,7 +135437,6 @@
                 "y" : 208.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -133769,7 +135453,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -134888,6 +136572,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "b9189365-019c-1000-b716-d88abcc08e1a",
+                "id" : "cabc38f4-019e-1000-0934-c0eef7b41fff",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "b9189365-019c-1000-b716-d88abcc08e1a",
+              "identifier" : "8ef8759d-f320-3e42-bdd9-91775f413e13",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "b9189365-019c-1000-b716-d88abcc08e1a",
+                "id" : "38d86eb6-3675-3a4e-a01c-c30459051514",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "b9189365-019c-1000-b716-d88abcc08e1a",
                 "id" : "9d8522af-d8e0-3e20-a954-370142c8777a",
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
@@ -135918,7 +137632,7 @@
               "type" : "org.apache.nifi.processors.standard.PutSQL",
               "yieldDuration" : "1 sec"
             }, {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -136278,7 +137992,6 @@
                 "y" : 280.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -136295,7 +138008,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -137123,6 +138836,36 @@
               "destination" : {
                 "comments" : "",
                 "groupId" : "bc47becc-019c-1000-0b9d-2524c065bccd",
+                "id" : "cabc7315-019e-1000-f4ac-1c05c3be0314",
+                "name" : "PutEmail",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "bc47becc-019c-1000-0b9d-2524c065bccd",
+              "identifier" : "6e017321-3d22-311b-8de7-7175dcf7135e",
+              "labelIndex" : 0,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "bc47becc-019c-1000-0b9d-2524c065bccd",
+                "id" : "1ecd7ad6-46d3-38e3-b37d-3cbaf4724ad5",
+                "name" : "ExecuteSQLRecord",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 32
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "bc47becc-019c-1000-0b9d-2524c065bccd",
                 "id" : "b680a900-5c45-3204-91f8-5b5ebb067552",
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
@@ -137316,7 +139059,7 @@
             },
             "processGroups" : [ ],
             "processors" : [ {
-              "autoTerminatedRelationships" : [ "failure" ],
+              "autoTerminatedRelationships" : [ ],
               "backoffMechanism" : "PENALIZE_FLOWFILE",
               "bulletinLevel" : "WARN",
               "bundle" : {
@@ -138556,7 +140299,6 @@
                 "y" : 240.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -138573,7 +140315,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -141518,7 +143260,6 @@
                 "y" : 320.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -141535,7 +143276,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -144846,7 +146587,6 @@
                 "y" : 48.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -144863,7 +146603,7 @@
                 "SMTP START TLS" : "true",
                 "Content Type" : "text/plain",
                 "SMTP Username" : "donotreply@mail.xenovex.com",
-                "To" : "kamali.d@xenovex.com,vignesh.n@xenovex.com"
+                "To" : "ticketonesupport@xenovex.com"
               },
               "propertyDescriptors" : {
                 "CC" : {
@@ -146715,6 +148455,19 @@
         "value" : "FinancialYear"
       } ]
     },
+    "mail_config" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "mail_ids",
+      "inheritedParameterContexts" : [ ],
+      "name" : "mail_config",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "mail_id",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "ticketonesupport@xenovex.com,kamali.d@xenovex.com"
+      } ]
+    },
     "vendor_online_param" : {
       "componentType" : "PARAMETER_CONTEXT",
       "description" : "",
@@ -147370,6 +149123,6 @@
   "snapshotMetadata" : {
     "author" : "31cea640-9d51-4c98-874f-1f3d7309c44e",
     "flowIdentifier" : "Nififlownewversion",
-    "timestamp" : 1787030507719
+    "timestamp" : 1787038117009
   }
 }
