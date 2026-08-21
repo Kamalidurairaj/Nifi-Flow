@@ -7324,6 +7324,7 @@
                 "y" : -472.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -10238,6 +10239,7 @@
                 "y" : 168.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -12962,6 +12964,7 @@
                 "y" : 224.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -15038,6 +15041,7 @@
                 "y" : 192.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -17114,6 +17118,7 @@
                 "y" : 272.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -19190,6 +19195,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -21266,6 +21272,7 @@
                 "y" : 319.07181479557016
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -23342,6 +23349,7 @@
                 "y" : 319.07181479557016
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -25418,6 +25426,7 @@
                 "y" : 208.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -27494,6 +27503,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -29573,6 +29583,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -31649,6 +31660,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -33725,6 +33737,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -35801,6 +35814,7 @@
                 "y" : 319.07181479557016
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -37880,6 +37894,7 @@
                 "y" : 319.07179823513763
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -39956,6 +39971,7 @@
                 "y" : 232.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -42032,6 +42048,7 @@
                 "y" : 319.07179823513763
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -44108,6 +44125,7 @@
                 "y" : 315.75265451588064
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -46184,6 +46202,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -48221,6 +48240,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -50297,6 +50317,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -52373,6 +52394,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -54449,6 +54471,7 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -56525,6 +56548,7 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -58601,6 +58625,7 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -60677,6 +60702,7 @@
                 "y" : 319.07181479556994
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -62756,6 +62782,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -64832,6 +64859,7 @@
                 "y" : 319.07181479557005
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -67369,7 +67397,7 @@
                 "y" : 216.0
               },
               "properties" : {
-                "CC" : "jeromechinnappan.s@xenovex.com,devak.a@xenovex.com",
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -73377,6 +73405,7 @@
                 "y" : 120.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -75255,6 +75284,7 @@
                 "y" : 144.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -77289,6 +77319,7 @@
                 "y" : 224.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -80279,6 +80310,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -82317,6 +82349,7 @@
                 "y" : 216.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -84747,6 +84780,7 @@
                 "y" : 224.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -86883,6 +86917,7 @@
                 "y" : 232.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -88964,6 +88999,7 @@
                 "y" : 288.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -91449,6 +91485,7 @@
                 "y" : 264.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -93014,6 +93051,7 @@
                 "y" : 288.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -95347,6 +95385,7 @@
                 "y" : 256.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -97741,6 +97780,7 @@
                 "y" : 240.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -100087,6 +100127,7 @@
                 "y" : 280.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -102507,6 +102548,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -104755,6 +104797,7 @@
                 "y" : 208.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -106887,6 +106930,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -109022,6 +109066,7 @@
                 "y" : 288.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -111329,6 +111374,7 @@
                 "y" : 208.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -113618,6 +113664,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -115609,6 +115656,7 @@
                 "y" : 280.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -118257,6 +118305,7 @@
                 "y" : 272.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -120491,6 +120540,7 @@
                 "y" : 240.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -121976,6 +122026,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -124959,6 +125010,7 @@
                 "y" : 288.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -126886,6 +126938,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -129227,6 +129280,7 @@
                 "y" : 224.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -131160,6 +131214,7 @@
                 "y" : 248.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -133604,6 +133659,7 @@
                 "y" : 232.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -135437,6 +135493,7 @@
                 "y" : 208.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -137992,6 +138049,7 @@
                 "y" : 280.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -140299,6 +140357,7 @@
                 "y" : 240.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -143260,6 +143319,7 @@
                 "y" : 320.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -146587,6 +146647,7 @@
                 "y" : 48.0
               },
               "properties" : {
+                "CC" : "kamali.d@xenovex.com",
                 "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
                 "Message" : "⚠️ NiFi Error Alert ⚠️\n\nProcessor: ${component.name}\nFlowFile: ${filename}\nUUID: ${uuid}\n\nError Message:\n${putdatabaserecord.error}\n\nFailure Timestamp:\n${now():format('yyyy-MM-dd HH:mm:ss')}\n\nProcessor Type:\n${component.type}\n\nProcessor ID:\n${component.id}\n\n💡 Please check NiFi logs or bulletin board for more details.",
                 "Attach File" : "false",
@@ -149123,6 +149184,6 @@
   "snapshotMetadata" : {
     "author" : "31cea640-9d51-4c98-874f-1f3d7309c44e",
     "flowIdentifier" : "Nififlownewversion",
-    "timestamp" : 1787038117009
+    "timestamp" : 1787309908619
   }
 }
