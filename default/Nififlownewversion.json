@@ -4076,6 +4076,35 @@
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
+              "comments" : "",
+              "groupId" : "4de220fa-8788-30f5-9831-b5a5cce513c1",
+              "id" : "18d8a68a-ae2d-3552-a1eb-fb630afdb8c9",
+              "name" : "TABLE_SYNC_SUCCESS",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "4de220fa-8788-30f5-9831-b5a5cce513c1",
+            "identifier" : "281291d8-23ad-363f-9cfc-966934fb96b2",
+            "labelIndex" : 0,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "groupId" : "b276b205-019c-1000-e66a-1ed724d7c256",
+              "id" : "b276b211-019c-1000-66b2-326d894648f0",
+              "name" : "outtb1",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 34
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
               "groupId" : "b27693af-019c-1000-d5d4-8f06b0f73ab6",
               "id" : "b27693ba-019c-1000-b2ce-e278d9539cd5",
               "name" : "input_tb1",
@@ -4182,35 +4211,6 @@
               "type" : "OUTPUT_PORT"
             },
             "zIndex" : 15
-          }, {
-            "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
-            "bends" : [ ],
-            "componentType" : "CONNECTION",
-            "destination" : {
-              "comments" : "",
-              "groupId" : "4de220fa-8788-30f5-9831-b5a5cce513c1",
-              "id" : "18d8a68a-ae2d-3552-a1eb-fb630afdb8c9",
-              "name" : "TABLE_SYNC_SUCCESS",
-              "type" : "OUTPUT_PORT"
-            },
-            "flowFileExpiration" : "0 sec",
-            "groupIdentifier" : "4de220fa-8788-30f5-9831-b5a5cce513c1",
-            "identifier" : "4a4c99d4-089e-38d5-9c88-3cf1bf4a2f73",
-            "labelIndex" : 0,
-            "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-            "name" : "",
-            "partitioningAttribute" : "",
-            "prioritizers" : [ ],
-            "selectedRelationships" : [ "" ],
-            "source" : {
-              "groupId" : "b276ccb7-019c-1000-180f-2646b907dfe5",
-              "id" : "b276ccc3-019c-1000-7a2a-d194c937c149",
-              "name" : "outtb1",
-              "type" : "OUTPUT_PORT"
-            },
-            "zIndex" : 31
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
@@ -4380,34 +4380,6 @@
               "type" : "OUTPUT_PORT"
             },
             "zIndex" : 10
-          }, {
-            "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
-            "bends" : [ ],
-            "componentType" : "CONNECTION",
-            "destination" : {
-              "groupId" : "b276bd09-019c-1000-c52e-8b315a645ade",
-              "id" : "b276bd14-019c-1000-60b7-982ca1ba538b",
-              "name" : "input_tb1",
-              "type" : "INPUT_PORT"
-            },
-            "flowFileExpiration" : "0 sec",
-            "groupIdentifier" : "4de220fa-8788-30f5-9831-b5a5cce513c1",
-            "identifier" : "7007c2b3-a5de-3020-a193-0b7fa6f66960",
-            "labelIndex" : 0,
-            "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-            "name" : "",
-            "partitioningAttribute" : "",
-            "prioritizers" : [ ],
-            "selectedRelationships" : [ "" ],
-            "source" : {
-              "groupId" : "b276b205-019c-1000-e66a-1ed724d7c256",
-              "id" : "b276b211-019c-1000-66b2-326d894648f0",
-              "name" : "outtb1",
-              "type" : "OUTPUT_PORT"
-            },
-            "zIndex" : 29
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
@@ -4772,34 +4744,6 @@
               "type" : "OUTPUT_PORT"
             },
             "zIndex" : 8
-          }, {
-            "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
-            "bends" : [ ],
-            "componentType" : "CONNECTION",
-            "destination" : {
-              "groupId" : "b276ccb7-019c-1000-180f-2646b907dfe5",
-              "id" : "b276ccc2-019c-1000-884f-747e8b6db794",
-              "name" : "input_tb1",
-              "type" : "INPUT_PORT"
-            },
-            "flowFileExpiration" : "0 sec",
-            "groupIdentifier" : "4de220fa-8788-30f5-9831-b5a5cce513c1",
-            "identifier" : "e14498db-233e-3649-aee6-5e3182324b3e",
-            "labelIndex" : 0,
-            "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-            "name" : "",
-            "partitioningAttribute" : "",
-            "prioritizers" : [ ],
-            "selectedRelationships" : [ "" ],
-            "source" : {
-              "groupId" : "b276bd09-019c-1000-c52e-8b315a645ade",
-              "id" : "b276bd15-019c-1000-db2f-b5d22a520c81",
-              "name" : "outtb1",
-              "type" : "OUTPUT_PORT"
-            },
-            "zIndex" : 30
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
@@ -5562,8 +5506,8 @@
             "name" : "TABLE_SYNC_SUCCESS",
             "portFunction" : "STANDARD",
             "position" : {
-              "x" : -2504.0,
-              "y" : 640.0
+              "x" : -552.0,
+              "y" : 1040.0
             },
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
@@ -5591,7 +5535,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "0 sec",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "2d34e443-f6fc-3bdd-a1c2-088445914bf6",
               "labelIndex" : 0,
@@ -5651,7 +5595,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "544cd3a0-2203-36b0-acf4-d94ce887cb43",
               "labelIndex" : 0,
@@ -5687,7 +5631,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "0 sec",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "57711b7a-9015-38b0-bf91-98ee19f0a9fd",
               "labelIndex" : 0,
@@ -5717,7 +5661,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "79da492f-1f36-3bfb-bc6d-a212b51d6a66",
               "labelIndex" : 0,
@@ -5747,7 +5691,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "86f1f966-5c75-305d-8710-82f1c915c321",
               "labelIndex" : 1,
@@ -5777,7 +5721,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "912af2da-60ae-3f96-b038-9cdfaa103464",
               "labelIndex" : 1,
@@ -5807,7 +5751,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "0 sec",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "ac485803-76b6-363f-ac2f-095ddc1d18b9",
               "labelIndex" : 0,
@@ -5866,7 +5810,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "da2f1d89-2f21-327c-a80b-df42c2d6d813",
               "labelIndex" : 0,
@@ -5926,7 +5870,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "e0717f87-c9e2-3734-a70c-62c8d3bc6232",
               "labelIndex" : 1,
@@ -5956,7 +5900,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "eabf5847-d634-3aa2-adc8-939fcab6094d",
               "labelIndex" : 1,
@@ -6016,7 +5960,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "9 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "31f161f8-b2e5-3c84-90ed-431b45636d95",
               "identifier" : "fa1c9553-bfef-336c-913b-6338adc23201",
               "labelIndex" : 0,
@@ -38098,7 +38042,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627a4-019c-1000-afd7-f716099c3f0b",
               "labelIndex" : 1,
@@ -38128,7 +38072,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627a5-019c-1000-8063-d838e59cfecb",
               "labelIndex" : 1,
@@ -38191,7 +38135,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627a7-019c-1000-1909-562999d2a525",
               "labelIndex" : 0,
@@ -38256,7 +38200,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627a9-019c-1000-0813-03b6dc725027",
               "labelIndex" : 0,
@@ -38286,7 +38230,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627aa-019c-1000-fb65-020ddf727557",
               "labelIndex" : 0,
@@ -38316,7 +38260,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627ab-019c-1000-c544-7ee05b5d8a32",
               "labelIndex" : 1,
@@ -38349,7 +38293,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627ac-019c-1000-fd5b-640fb7453e72",
               "labelIndex" : 0,
@@ -38379,7 +38323,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627ad-019c-1000-5a23-d712e1254222",
               "labelIndex" : 0,
@@ -38409,7 +38353,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627ae-019c-1000-2ae6-32c5ca106e55",
               "labelIndex" : 1,
@@ -38469,7 +38413,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627b0-019c-1000-d456-368344650896",
               "labelIndex" : 0,
@@ -38498,7 +38442,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2762797-019c-1000-a7ab-710426a42ab6",
               "identifier" : "b27627b1-019c-1000-5871-a636cdce3dd4",
               "labelIndex" : 0,
@@ -40205,7 +40149,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763429-019c-1000-c96b-b0c2608e098f",
               "labelIndex" : 1,
@@ -40235,7 +40179,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b276342a-019c-1000-37eb-ed6f8d1266ce",
               "labelIndex" : 1,
@@ -40298,7 +40242,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b276342c-019c-1000-f88b-186ff890cee9",
               "labelIndex" : 0,
@@ -40363,7 +40307,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b276342e-019c-1000-20e8-05cdbe8aae9b",
               "labelIndex" : 0,
@@ -40393,7 +40337,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b276342f-019c-1000-9df0-3884cdbde727",
               "labelIndex" : 0,
@@ -40423,7 +40367,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763430-019c-1000-1ca1-0f9d01d820cf",
               "labelIndex" : 1,
@@ -40456,7 +40400,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763431-019c-1000-cc55-d93b9ea1e1fa",
               "labelIndex" : 0,
@@ -40486,7 +40430,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763432-019c-1000-fdad-9f5a0d2f8c56",
               "labelIndex" : 0,
@@ -40516,7 +40460,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763433-019c-1000-f237-d64367539c41",
               "labelIndex" : 1,
@@ -40576,7 +40520,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763435-019c-1000-cbdc-6023460b4dd0",
               "labelIndex" : 0,
@@ -40605,7 +40549,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b276341c-019c-1000-c805-e940b600d71e",
               "identifier" : "b2763436-019c-1000-cabb-b9e7791bf20e",
               "labelIndex" : 0,
@@ -40926,7 +40870,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"BookingDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingDetails\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n      AND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\n      )\n    ORDER BY B.\"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"BookingDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingDetails\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n      AND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\n and A.\"SyncStatusType\" = 1 )\n    ORDER BY B.\"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -41236,7 +41180,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"TicketGroupProductMappingId\", \n  \"SlotId\", \n  \"TicketQuantity\", \n  \"TicketUnitCost\", \n  \"TicketTotalCost\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"BBPTicketPerc\", \n  \"BBPTicketTotalCost\", \n  \"KSTDCTicketPerc\", \n  \"KSTDCTicketTotalCost\", \n  \"RefundedCharge\", \n  \"RefundedCost\", \n  \"CGst\", \n  \"CGstValue\", \n  \"Gst\", \n  \"GstValue\", \n  \"UnitDiscount\", \n  \"UnitDiscountValue\", \n  \"UnitServiceCharge\", \n  \"NoOfSeatCount\", \n  \"TicketTariffId\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"TicketGroupProductMappingId\", \n  \"SlotId\", \n  \"TicketQuantity\", \n  \"TicketUnitCost\", \n  \"TicketTotalCost\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"BBPTicketPerc\", \n  \"BBPTicketTotalCost\", \n  \"KSTDCTicketPerc\", \n  \"KSTDCTicketTotalCost\", \n  \"RefundedCharge\", \n  \"RefundedCost\", \n  \"CGst\", \n  \"CGstValue\", \n  \"Gst\", \n  \"GstValue\", \n  \"UnitDiscount\", \n  \"UnitDiscountValue\", \n  \"UnitServiceCharge\", \n  \"NoOfSeatCount\", \n  \"TicketTariffId\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -42252,7 +42196,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642c3-019c-1000-1d1d-48884bfe1d60",
               "labelIndex" : 1,
@@ -42282,7 +42226,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642c4-019c-1000-f7b7-7d077c2d8d62",
               "labelIndex" : 1,
@@ -42315,7 +42259,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642c5-019c-1000-06bd-90d5cd59e7e8",
               "labelIndex" : 0,
@@ -42345,7 +42289,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642c6-019c-1000-6764-c19b23570af2",
               "labelIndex" : 0,
@@ -42410,7 +42354,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642c8-019c-1000-c201-f2bd420450c1",
               "labelIndex" : 0,
@@ -42440,7 +42384,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642c9-019c-1000-01a3-61cc56d72ad9",
               "labelIndex" : 0,
@@ -42470,7 +42414,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642ca-019c-1000-be40-9f9bc3cbbfa3",
               "labelIndex" : 1,
@@ -42503,7 +42447,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642cb-019c-1000-3899-842b1ca816f6",
               "labelIndex" : 0,
@@ -42533,7 +42477,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642cc-019c-1000-9218-39ecf679785f",
               "labelIndex" : 0,
@@ -42563,7 +42507,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642cd-019c-1000-c01b-8ddc019c9eb0",
               "labelIndex" : 1,
@@ -42623,7 +42567,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642cf-019c-1000-fed1-8454b403e4cc",
               "labelIndex" : 0,
@@ -42652,7 +42596,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b27642b6-019c-1000-dcf0-0050dfb38017",
               "identifier" : "b27642d0-019c-1000-1da8-2dc6c046e75f",
               "labelIndex" : 0,
@@ -43003,7 +42947,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"PaymentHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"PaymentHistory\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"PaymentHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"PaymentHistory\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -43313,7 +43257,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"PaymentStatusType\", \n  \"PaymentStatusCode\", \n  \"TransactionId\", \n  \"PaymentMode\", \n  \"Amount\", \n  \"BookingId\", \n  \"TransactionTs\", \n  \"GatewayResponse\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"OrderGeneratedTs\", \n  \"OrderResponse\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n  \"Id\", \n  \"PaymentStatusType\", \n  \"PaymentStatusCode\", \n  \"TransactionId\", \n  \"PaymentMode\", \n  \"Amount\", \n  \"BookingId\", \n  \"TransactionTs\", \n  \"GatewayResponse\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"OrderGeneratedTs\", \n  \"OrderResponse\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -44389,7 +44333,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dc3-019c-1000-b9b3-ecf0acca326a",
               "labelIndex" : 1,
@@ -44419,7 +44363,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dc4-019c-1000-1719-0aa9df8d0197",
               "labelIndex" : 1,
@@ -44482,7 +44426,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dc6-019c-1000-549e-8be2a614e2b3",
               "labelIndex" : 0,
@@ -44547,7 +44491,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dc8-019c-1000-c6b1-3fd2d67243c3",
               "labelIndex" : 0,
@@ -44577,7 +44521,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dc9-019c-1000-f11a-8ed4a626ea17",
               "labelIndex" : 0,
@@ -44607,7 +44551,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dca-019c-1000-b709-b49495e5b60a",
               "labelIndex" : 1,
@@ -44640,7 +44584,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dcb-019c-1000-7031-bbf22064103c",
               "labelIndex" : 0,
@@ -44670,7 +44614,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dcc-019c-1000-c580-36124cda58b5",
               "labelIndex" : 0,
@@ -44700,7 +44644,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dcd-019c-1000-b8b6-87efc0fc1682",
               "labelIndex" : 1,
@@ -44760,7 +44704,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dcf-019c-1000-6515-5b1db6a86166",
               "labelIndex" : 0,
@@ -44789,7 +44733,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2764db6-019c-1000-678d-b217faa7e8c4",
               "identifier" : "b2764dd0-019c-1000-b8a1-4a77034a97c6",
               "labelIndex" : 0,
@@ -45080,7 +45024,7 @@
                 "y" : 232.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"BookingScan\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScan\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"BookingScan\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScan\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -45390,7 +45334,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\", \n  \"InQuantity\", \n  \"OutQuantity\", \n  \"Quantity\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\n\tAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
+                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\", \n  \"InQuantity\", \n  \"OutQuantity\", \n  \"Quantity\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\n\tAnd EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -46406,7 +46350,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "152fccde-2fd8-3471-84f4-9d8a4eed629d",
               "labelIndex" : 0,
@@ -46466,7 +46410,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "4165b773-dba2-3214-93af-a212ea787ece",
               "labelIndex" : 0,
@@ -46496,7 +46440,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "a00ea8f1-92a4-3469-8168-02173a762611",
               "labelIndex" : 0,
@@ -46556,7 +46500,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c27-019c-1000-a4fb-b99e08a2c701",
               "labelIndex" : 1,
@@ -46589,7 +46533,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c28-019c-1000-8562-4041084f0cbf",
               "labelIndex" : 0,
@@ -46648,7 +46592,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c2c-019c-1000-c8b0-ddb8eadb0368",
               "labelIndex" : 0,
@@ -46678,7 +46622,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c2f-019c-1000-f6ea-c7302cac1f01",
               "labelIndex" : 0,
@@ -46708,7 +46652,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c30-019c-1000-5e35-bf4ce6f1c84b",
               "labelIndex" : 1,
@@ -46768,7 +46712,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c32-019c-1000-545a-692af0ee3d28",
               "labelIndex" : 0,
@@ -46797,7 +46741,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "b2765c33-019c-1000-9643-c26cf801360b",
               "labelIndex" : 0,
@@ -46827,7 +46771,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b2765c19-019c-1000-b84d-b21d51a48310",
               "identifier" : "f244677d-b1d5-3042-b55d-d1bdb90c485f",
               "labelIndex" : 0,
@@ -47118,7 +47062,7 @@
                 "y" : 144.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"BookingScanHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScanHistory\" B\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"BookingScanHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScanHistory\" B\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -47428,7 +47372,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\n\tAnd EXISTS  (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
+                "SQL Query" : "SELECT \n  \"Id\", \n  \"BookingId\", \n  \"InTs\", \n  \"OutTs\", \n  \"ScanType\", \n  \"UserInfoId\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\", \n  \"GateDetailsId\"\nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\n\tAnd EXISTS  (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nand A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -61410,7 +61354,7 @@
                 "x" : -1128.0,
                 "y" : -8.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "INPUT_PORT"
             } ],
             "labels" : [ ],
@@ -61428,13 +61372,13 @@
                 "x" : 3784.0,
                 "y" : -112.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "OUTPUT_PORT"
             } ],
             "parameterContextName" : "GateTemperatureInfo_online_param",
             "position" : {
-              "x" : -264.0,
-              "y" : 1000.0
+              "x" : -664.0,
+              "y" : 1272.0
             },
             "processGroups" : [ ],
             "processors" : [ {
@@ -61529,7 +61473,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -61627,7 +61571,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -61827,7 +61771,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -61925,7 +61869,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62006,7 +61950,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62151,7 +62095,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62263,7 +62207,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62336,7 +62280,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62489,7 +62433,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62747,7 +62691,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -62961,7 +62905,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -63487,7 +63431,7 @@
                 "x" : -1128.0,
                 "y" : -8.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "INPUT_PORT"
             } ],
             "labels" : [ ],
@@ -63505,13 +63449,13 @@
                 "x" : 3784.0,
                 "y" : -112.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "OUTPUT_PORT"
             } ],
             "parameterContextName" : "GateVibrationInfo_online_param",
             "position" : {
-              "x" : -784.0,
-              "y" : 1000.0
+              "x" : -1232.0,
+              "y" : 1256.0
             },
             "processGroups" : [ ],
             "processors" : [ {
@@ -63606,7 +63550,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -63704,7 +63648,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -63904,7 +63848,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64002,7 +63946,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64083,7 +64027,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64114,7 +64058,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n  \"Id\", \n  \"GateTypeId\", \n  \"Vibration\", \n  \"GateTime\", \n  \"CreationTs\", \n  \"CreationUserId\", \n  \"LastChangeTs\", \n  \"LastChangeUserId\", \n  \"StatusType\", \n  1 as \"SyncStatusType\"\nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \"GateTypeId\", \"Rms\", \"GateTime\", \"CreationTs\", \"CreationUserId\", \"LastChangeTs\", \n\"LastChangeUserId\",\n\"StatusType\", 1 as \"SyncStatusType\",\n\"CrestFactor\", \"DominantFrequency\", \"Peak\"\nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "6ef49a19-6d47-3a8f-8c4f-187af5e6d394",
                 "Default Decimal Scale" : "0",
@@ -64228,7 +64172,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64340,7 +64284,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64413,7 +64357,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64566,7 +64510,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -64824,7 +64768,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -65038,7 +64982,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -65093,7 +65037,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "0b3e40b0-99fe-3bf3-90b9-3cbeefc3a1c6",
               "labelIndex" : 0,
@@ -65123,7 +65067,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "13a614f7-f9b8-3329-a17d-8173784e0e16",
               "labelIndex" : 0,
@@ -65153,7 +65097,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "15d5f28b-0a97-3b70-acd7-4e3892492821",
               "labelIndex" : 0,
@@ -65182,7 +65126,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "29b315e3-5719-3e12-a449-fd6e58ce6267",
               "labelIndex" : 0,
@@ -65212,7 +65156,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "2b031678-5411-39bd-8aec-39588d6bf61c",
               "labelIndex" : 0,
@@ -65242,7 +65186,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "3913c180-21d6-362c-bcd4-0c76761be263",
               "labelIndex" : 0,
@@ -65302,7 +65246,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "41804713-d794-3dff-b26c-1495a642918f",
               "labelIndex" : 0,
@@ -65365,7 +65309,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "672f844f-736b-3aef-958e-ce53ff43f981",
               "labelIndex" : 0,
@@ -65395,7 +65339,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "72e16023-aed4-3d0b-b12d-924d92677108",
               "labelIndex" : 0,
@@ -65425,7 +65369,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "737587b7-5702-3056-adaf-e066ebc81151",
               "labelIndex" : 0,
@@ -65455,7 +65399,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "75b77440-2a97-3c42-857a-11d286a5dc71",
               "labelIndex" : 0,
@@ -65485,7 +65429,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "79b44655-b078-3e0b-a1a4-3efa925d443c",
               "labelIndex" : 1,
@@ -65545,7 +65489,7 @@
                 "name" : "RouteOnAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "87a29500-215e-3b08-bec9-8d1cf1c14041",
               "labelIndex" : 0,
@@ -65575,7 +65519,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "886f3a1a-266f-396d-8e1e-84323c8f64df",
               "labelIndex" : 0,
@@ -65605,7 +65549,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "9720619c-f471-3e78-b2fb-55574eb85325",
               "labelIndex" : 0,
@@ -65635,7 +65579,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "b0376c31-f1ec-30db-a17d-4eced048ee1f",
               "labelIndex" : 0,
@@ -65730,7 +65674,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "d2612804-eb7a-3c52-a5a1-833046ff1ad8",
               "labelIndex" : 0,
@@ -65760,7 +65704,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "d6d48ba0-9b98-3457-be27-9aa7519c8ea8",
               "labelIndex" : 0,
@@ -65856,7 +65800,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "ef29a417-9d30-32d6-aedb-602ecdd8f4c1",
               "identifier" : "fca61fa8-46e1-3e4a-a483-b92d690f5777",
               "labelIndex" : 0,
@@ -70293,6 +70237,35 @@
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
+              "comments" : "",
+              "groupId" : "ad0e3414-019c-1000-7eca-bd89e74331c2",
+              "id" : "ad0e3421-019c-1000-897e-bc97e6e7c70e",
+              "name" : "TABLE_SYNC_SUCCESS",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "ad0e3414-019c-1000-7eca-bd89e74331c2",
+            "identifier" : "18863dae-dbf1-3051-b415-f4c627dee2f7",
+            "labelIndex" : 0,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "groupId" : "b9126251-019c-1000-9c3d-de7cbd312879",
+              "id" : "7f403c74-6242-3df3-8085-5873a0c63e1b",
+              "name" : "out_31",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 77
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
               "groupId" : "b8036e80-019c-1000-86e4-32f1c14770a9",
               "id" : "aa11d6fd-d743-3163-8860-3b66fa367d1e",
               "name" : "input_16",
@@ -70489,34 +70462,6 @@
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
-              "groupId" : "bc47becc-019c-1000-0b9d-2524c065bccd",
-              "id" : "75272087-fc5e-34a5-98b7-6bb3edcf1c82",
-              "name" : "input_33",
-              "type" : "INPUT_PORT"
-            },
-            "flowFileExpiration" : "0 sec",
-            "groupIdentifier" : "ad0e3414-019c-1000-7eca-bd89e74331c2",
-            "identifier" : "49edb263-c59f-35b5-bf36-6c4c8c4f193c",
-            "labelIndex" : 0,
-            "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-            "name" : "",
-            "partitioningAttribute" : "",
-            "prioritizers" : [ ],
-            "selectedRelationships" : [ "" ],
-            "source" : {
-              "groupId" : "b9189365-019c-1000-b716-d88abcc08e1a",
-              "id" : "f220a141-5396-3d8b-b0b7-8160760ed45a",
-              "name" : "out_32",
-              "type" : "OUTPUT_PORT"
-            },
-            "zIndex" : 64
-          }, {
-            "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
-            "bends" : [ ],
-            "componentType" : "CONNECTION",
-            "destination" : {
               "groupId" : "b80434b3-019c-1000-4cdf-cf5228a5d3e1",
               "id" : "86d96f44-b965-32fc-b48a-234854ee91e1",
               "name" : "input_17",
@@ -70707,35 +70652,6 @@
               "type" : "OUTPUT_PORT"
             },
             "zIndex" : 57
-          }, {
-            "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
-            "bends" : [ ],
-            "componentType" : "CONNECTION",
-            "destination" : {
-              "comments" : "",
-              "groupId" : "ad0e3414-019c-1000-7eca-bd89e74331c2",
-              "id" : "ad0e3421-019c-1000-897e-bc97e6e7c70e",
-              "name" : "TABLE_SYNC_SUCCESS",
-              "type" : "OUTPUT_PORT"
-            },
-            "flowFileExpiration" : "0 sec",
-            "groupIdentifier" : "ad0e3414-019c-1000-7eca-bd89e74331c2",
-            "identifier" : "6e337984-9100-3e83-bb94-e03873a736ea",
-            "labelIndex" : 0,
-            "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-            "name" : "",
-            "partitioningAttribute" : "",
-            "prioritizers" : [ ],
-            "selectedRelationships" : [ "" ],
-            "source" : {
-              "groupId" : "bc47becc-019c-1000-0b9d-2524c065bccd",
-              "id" : "5079b551-2242-36fa-90f9-f732ee17b35b",
-              "name" : "out_33",
-              "type" : "OUTPUT_PORT"
-            },
-            "zIndex" : 67
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
@@ -71073,34 +70989,6 @@
               "type" : "OUTPUT_PORT"
             },
             "zIndex" : 53
-          }, {
-            "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
-            "bends" : [ ],
-            "componentType" : "CONNECTION",
-            "destination" : {
-              "groupId" : "b9189365-019c-1000-b716-d88abcc08e1a",
-              "id" : "13eb7953-a31b-3c0e-a108-891c72363ade",
-              "name" : "input_32",
-              "type" : "INPUT_PORT"
-            },
-            "flowFileExpiration" : "0 sec",
-            "groupIdentifier" : "ad0e3414-019c-1000-7eca-bd89e74331c2",
-            "identifier" : "d16e9b73-e2f0-3d94-807c-223c750a5cab",
-            "labelIndex" : 0,
-            "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-            "name" : "",
-            "partitioningAttribute" : "",
-            "prioritizers" : [ ],
-            "selectedRelationships" : [ "" ],
-            "source" : {
-              "groupId" : "b9126251-019c-1000-9c3d-de7cbd312879",
-              "id" : "7f403c74-6242-3df3-8085-5873a0c63e1b",
-              "name" : "out_31",
-              "type" : "OUTPUT_PORT"
-            },
-            "zIndex" : 63
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
@@ -71778,8 +71666,8 @@
             "name" : "TABLE_SYNC_SUCCESS",
             "portFunction" : "STANDARD",
             "position" : {
-              "x" : 2000.0,
-              "y" : 920.0
+              "x" : 792.0,
+              "y" : 864.0
             },
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
@@ -111804,7 +111692,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "03a8ad7b-59e0-3da5-b98d-3fb71a64489e",
               "labelIndex" : 1,
@@ -111834,7 +111722,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "29af3b82-78af-37a0-b3af-3a31998c3cf1",
               "labelIndex" : 1,
@@ -111864,7 +111752,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "4ba2f505-a562-344d-9e2e-bce1474d4f82",
               "labelIndex" : 0,
@@ -111954,7 +111842,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "72df3cdf-4823-38f7-b6ab-8173b976a427",
               "labelIndex" : 1,
@@ -112014,7 +111902,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "ac5cdd93-c349-394a-8f60-c0f476085ea9",
               "labelIndex" : 0,
@@ -112043,7 +111931,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "adee9718-e62c-3782-8af7-02a07199ce95",
               "labelIndex" : 0,
@@ -112073,7 +111961,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "b86d436a-d3fb-3d0c-86e8-7852e0752137",
               "labelIndex" : 0,
@@ -112103,7 +111991,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "bff3cdd6-e2ba-3b2d-a3c8-b1142d4dfc55",
               "labelIndex" : 0,
@@ -112162,7 +112050,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "20 min",
               "groupIdentifier" : "b8131bb2-019c-1000-95d1-e193b6f5c3d3",
               "identifier" : "d8d43deb-5ab4-3370-8bc3-b111eff49596",
               "labelIndex" : 0,
@@ -114039,7 +113927,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "0bc55989-84ec-36d3-9d13-1b0c57712282",
               "labelIndex" : 0,
@@ -114069,7 +113957,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "13511bba-bd01-3821-baa9-20c3979072eb",
               "labelIndex" : 1,
@@ -114158,7 +114046,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "39e16dcf-e585-3252-9a41-2b123da5ea98",
               "labelIndex" : 0,
@@ -114188,7 +114076,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "50b1ade9-ce7c-32cd-b7af-397f58e3a3d4",
               "labelIndex" : 0,
@@ -114218,7 +114106,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "628401e5-1154-3287-8ded-aefc0a32b3ad",
               "labelIndex" : 0,
@@ -114247,7 +114135,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "81084574-16cf-3523-93e1-10fbd445233b",
               "labelIndex" : 1,
@@ -114277,7 +114165,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "81f5c6fb-453c-3cbd-a2ad-e0b116347981",
               "labelIndex" : 1,
@@ -114337,7 +114225,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "c1ba8ee7-2631-3cb5-89da-6f50ef689633",
               "labelIndex" : 0,
@@ -114367,7 +114255,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "c1d7a95d-a465-3c1a-975c-d45b8980107d",
               "labelIndex" : 0,
@@ -114427,7 +114315,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b826f18a-019c-1000-3a33-f06bd8f3c4c5",
               "identifier" : "effc6938-32fa-3d17-b822-159bddcb352e",
               "labelIndex" : 0,
@@ -116035,7 +115923,7 @@
                 "y" : -184.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"BookingDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingDetails\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n      AND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\n      )\n    ORDER BY B.\"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"BookingDetails\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingDetails\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n      AND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1\n      )\n    ORDER BY B.\"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -116135,7 +116023,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"TicketGroupProductMappingId\", \n\"SlotId\", \n\"TicketQuantity\", \n\"TicketUnitCost\", \n\"TicketTotalCost\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"BBPTicketPerc\", \n\"BBPTicketTotalCost\", \n\"KSTDCTicketPerc\", \n\"KSTDCTicketTotalCost\", \n\"RefundedCharge\", \n\"RefundedCost\", \n\"CGst\", \n\"CGstValue\", \n\"Gst\", \n\"GstValue\", \n\"UnitDiscount\", \n\"UnitDiscountValue\", \n\"UnitServiceCharge\", \n\"NoOfSeatCount\", \n\"TicketTariffId\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE B.\"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"TicketGroupProductMappingId\", \n\"SlotId\", \n\"TicketQuantity\", \n\"TicketUnitCost\", \n\"TicketTotalCost\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"BBPTicketPerc\", \n\"BBPTicketTotalCost\", \n\"KSTDCTicketPerc\", \n\"KSTDCTicketTotalCost\", \n\"RefundedCharge\", \n\"RefundedCost\", \n\"CGst\", \n\"CGstValue\", \n\"Gst\", \n\"GstValue\", \n\"UnitDiscount\", \n\"UnitDiscountValue\", \n\"UnitServiceCharge\", \n\"NoOfSeatCount\", \n\"TicketTariffId\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE B.\"SyncStatusType\" = 0\nAND (\n      B.\"CreationTs\" <= '${sync.datetime}'\n      OR B.\"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -116274,7 +116162,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "1e880a81-87d6-3337-a7c6-40a2674d8645",
               "labelIndex" : 1,
@@ -116304,7 +116192,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "21b20d81-e6cb-3f2c-80de-ddbf87831ca1",
               "labelIndex" : 0,
@@ -116334,7 +116222,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "51d881ef-8fda-34a2-8797-b8127418877c",
               "labelIndex" : 1,
@@ -116364,7 +116252,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "538cc37c-23fa-3e71-9c80-0216ffb500d3",
               "labelIndex" : 0,
@@ -116424,7 +116312,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "78b2900b-9b93-3bea-8306-54fdd9d843c3",
               "labelIndex" : 0,
@@ -116454,7 +116342,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "8370865a-6ae1-3399-a270-1230d5b9ca65",
               "labelIndex" : 1,
@@ -116514,7 +116402,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "954ea6b4-6343-340a-bf3d-91927e16e3bf",
               "labelIndex" : 0,
@@ -116572,7 +116460,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "c482d07e-648e-3d3e-91a5-196a588da2d3",
               "labelIndex" : 0,
@@ -116602,7 +116490,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "c6dbe7c9-5e7a-3bdb-a218-fb8f6b0cbace",
               "labelIndex" : 0,
@@ -116662,7 +116550,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b8275026-019c-1000-2c20-97083cac5c40",
               "identifier" : "f715fd51-9606-3469-b3a0-7817353508ec",
               "labelIndex" : 0,
@@ -117732,7 +117620,7 @@
                 "y" : -200.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"BookingScan\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScan\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);\n",
+                "SQL Statement" : "UPDATE \"BookingScan\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScan\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);\n",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -118003,7 +117891,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\", \n\"InQuantity\", \n\"OutQuantity\", \n\"Quantity\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\", \n\"InQuantity\", \n\"OutQuantity\", \n\"Quantity\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -118509,7 +118397,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "06a5ce08-03f7-3efa-b8fa-fb8cf712a193",
               "labelIndex" : 0,
@@ -118539,7 +118427,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "0aa9feeb-45d7-360e-a092-a86abb5659df",
               "labelIndex" : 1,
@@ -118629,7 +118517,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "22314101-e883-3f4e-919d-94b41030f100",
               "labelIndex" : 0,
@@ -118658,7 +118546,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "244219c1-f9cf-3269-b017-c0deeb6ac8c7",
               "labelIndex" : 1,
@@ -118717,7 +118605,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "489b9b5f-4af3-304d-ab25-f488daadd3d3",
               "labelIndex" : 0,
@@ -118747,7 +118635,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "6ddf3cf0-f7eb-3fcb-9f05-4526ec669637",
               "labelIndex" : 1,
@@ -118807,7 +118695,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "c730894f-003f-314b-b6f3-18b4e6782fdc",
               "labelIndex" : 0,
@@ -118837,7 +118725,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "cbf3a47b-80f4-3a3e-bac2-b5f29a85a243",
               "labelIndex" : 0,
@@ -118897,7 +118785,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "d31046e0-8ef6-3a79-846a-d82cb90cb6f8",
               "labelIndex" : 0,
@@ -118927,7 +118815,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b835cd17-019c-1000-2d53-7e9f3aaa8f98",
               "identifier" : "d59a082e-74fb-3a26-b665-970620cfdce8",
               "labelIndex" : 0,
@@ -119576,7 +119464,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"PaymentStatusType\", \n\"PaymentStatusCode\", \n\"TransactionId\", \n\"PaymentMode\", \n\"Amount\", \n\"BookingId\", \n\"TransactionTs\", \n\"GatewayResponse\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"OrderGeneratedTs\", \n\"OrderResponse\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"PaymentStatusType\", \n\"PaymentStatusCode\", \n\"TransactionId\", \n\"PaymentMode\", \n\"Amount\", \n\"BookingId\", \n\"TransactionTs\", \n\"GatewayResponse\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"OrderGeneratedTs\", \n\"OrderResponse\"  \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -119872,7 +119760,7 @@
                 "y" : -216.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"PaymentHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"PaymentHistory\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"PaymentHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"PaymentHistory\" B\n    WHERE B.\"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -120744,7 +120632,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "0675d947-4320-3d14-b893-2192e2c3a9e7",
               "labelIndex" : 0,
@@ -120834,7 +120722,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "18b300d3-17cf-3bdc-85ba-114ab05aae01",
               "labelIndex" : 0,
@@ -120894,7 +120782,7 @@
                 "name" : "PutSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "33867ba7-24b1-37cc-9203-af5c2b220209",
               "labelIndex" : 0,
@@ -120924,7 +120812,7 @@
                 "name" : "ExecuteSQL",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "4953f175-156c-356c-bcf1-071138a3c3d2",
               "labelIndex" : 0,
@@ -120954,7 +120842,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "8096f157-3d7a-3466-bbc5-10e2fe8e081b",
               "labelIndex" : 0,
@@ -121013,7 +120901,7 @@
                 "name" : "LogAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "b25c11f8-42dd-3e40-a5fd-a25c94694707",
               "labelIndex" : 0,
@@ -121072,7 +120960,7 @@
                 "name" : "PutDatabaseRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "c1f25b59-4eba-3a15-9682-ff49c2267399",
               "labelIndex" : 1,
@@ -121102,7 +120990,7 @@
                 "name" : "MergeContent",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "e7e789ce-ae76-3f73-adda-2fcdf9256407",
               "labelIndex" : 0,
@@ -121132,7 +121020,7 @@
                 "name" : "UpdateAttribute",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "eb9f6780-102e-3273-80e2-d8b5d84607ed",
               "labelIndex" : 1,
@@ -121162,7 +121050,7 @@
                 "name" : "ExecuteSQLRecord",
                 "type" : "PROCESSOR"
               },
-              "flowFileExpiration" : "10 min",
+              "flowFileExpiration" : "15 min",
               "groupIdentifier" : "b843014a-019c-1000-cd15-ac7108a39fe3",
               "identifier" : "ffd12b3e-3a8b-3a73-ab23-26c9dd2c7ad0",
               "labelIndex" : 1,
@@ -121451,7 +121339,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\"    \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\")\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \n\"BookingId\", \n\"InTs\", \n\"OutTs\", \n\"ScanType\", \n\"UserInfoId\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\",\n\"GateDetailsId\"    \nFROM \"#{schema_name}\".\"#{table_name}\" B\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nAND EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\" = B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -122315,7 +122203,7 @@
                 "y" : -200.0
               },
               "properties" : {
-                "SQL Statement" : "UPDATE \"BookingScanHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScanHistory\" B\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\")\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
+                "SQL Statement" : "UPDATE \"BookingScanHistory\"\nSET \"SyncStatusType\" = 1\nWHERE \"Id\" IN (\n    SELECT B.\"Id\"\n    FROM \"BookingScanHistory\" B\n    WHERE \"SyncStatusType\" = 0\n      AND (\n            B.\"CreationTs\" <= '${sync.datetime}'\n         OR B.\"LastChangeTs\" <= '${sync.datetime}'\n      )\n\t  And EXISTS (SELECT 1 FROM \"Booking\" A WHERE A.\"Id\"=B.\"BookingId\"\nAND A.\"SyncStatusType\" = 1)\n    ORDER BY \"Id\"\n    LIMIT (\n        SELECT value::bigint\n        FROM analytics.config\n        WHERE key = 'batch_limit'\n    )\n);",
                 "Support Fragmented Transactions" : "true",
                 "Database Session AutoCommit" : "false",
                 "Batch Size" : "100",
@@ -136848,7 +136736,7 @@
                 "x" : -1456.0,
                 "y" : -24.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "INPUT_PORT"
             } ],
             "labels" : [ ],
@@ -136866,13 +136754,13 @@
                 "x" : 3568.0,
                 "y" : -152.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "OUTPUT_PORT"
             } ],
             "parameterContextName" : "GateTemperatureInfo_offline_param",
             "position" : {
-              "x" : 512.0,
-              "y" : 864.0
+              "x" : 464.0,
+              "y" : 1160.0
             },
             "processGroups" : [ ],
             "processors" : [ {
@@ -136967,7 +136855,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -137167,7 +137055,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -137425,7 +137313,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -137578,7 +137466,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -137676,7 +137564,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -137821,7 +137709,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -137933,7 +137821,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -138014,7 +137902,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -138228,7 +138116,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -138428,7 +138316,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -138526,7 +138414,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -138599,7 +138487,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -139083,7 +138971,7 @@
                 "x" : -1456.0,
                 "y" : -24.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "INPUT_PORT"
             } ],
             "labels" : [ ],
@@ -139101,13 +138989,13 @@
                 "x" : 3568.0,
                 "y" : -152.0
               },
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "type" : "OUTPUT_PORT"
             } ],
             "parameterContextName" : "GateVibrationInfo_offline_param",
             "position" : {
-              "x" : 1240.0,
-              "y" : 864.0
+              "x" : 1000.0,
+              "y" : 1104.0
             },
             "processGroups" : [ ],
             "processors" : [ {
@@ -139135,7 +139023,7 @@
               "properties" : {
                 "Set Auto Commit" : "true",
                 "Max Wait Time" : "0 seconds",
-                "SQL Query" : "SELECT \n\"Id\", \n\"GateTypeId\", \n\"Vibration\", \n\"GateTime\", \n\"CreationTs\", \n\"CreationUserId\", \n\"LastChangeTs\", \n\"LastChangeUserId\", \n\"StatusType\", \n1 as \"SyncStatusType\"  \nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
+                "SQL Query" : "SELECT \n\"Id\", \"GateTypeId\", \"Rms\", \"GateTime\", \"CreationTs\", \"CreationUserId\", \"LastChangeTs\", \n\"LastChangeUserId\",\n\"StatusType\", 1 as \"SyncStatusType\",\n\"CrestFactor\", \"DominantFrequency\", \"Peak\"\nFROM \"#{schema_name}\".\"#{table_name}\"\nWHERE \"SyncStatusType\" = 0\nAND (\n      \"CreationTs\" <= '${sync.datetime}'\n      OR \"LastChangeTs\" <= '${sync.datetime}'\n    )\nORDER BY \"Id\"\nLIMIT (\n    SELECT value::bigint \n    FROM analytics.config where key ='batch_limit'\n);\n",
                 "Normalize Table/Column Names" : "false",
                 "Database Connection Pooling Service" : "37b8976c-e802-3491-8be0-85b256954922",
                 "Default Decimal Scale" : "0",
@@ -139249,7 +139137,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -139347,7 +139235,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -139420,7 +139308,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -139620,7 +139508,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -139878,7 +139766,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -139959,7 +139847,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -140071,7 +139959,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 25,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -140169,7 +140057,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -140322,7 +140210,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -140536,7 +140424,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -140736,7 +140624,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -140834,7 +140722,7 @@
               "retriedRelationships" : [ ],
               "retryCount" : 10,
               "runDurationMillis" : 0,
-              "scheduledState" : "ENABLED",
+              "scheduledState" : "DISABLED",
               "schedulingPeriod" : "0 sec",
               "schedulingStrategy" : "TIMER_DRIVEN",
               "style" : { },
@@ -149178,6 +149066,6 @@
   "snapshotMetadata" : {
     "author" : "31cea640-9d51-4c98-874f-1f3d7309c44e",
     "flowIdentifier" : "Nififlownewversion",
-    "timestamp" : 1788348320991
+    "timestamp" : 1789132849904
   }
 }
